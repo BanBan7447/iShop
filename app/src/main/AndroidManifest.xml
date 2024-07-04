@@ -13,10 +13,37 @@
         android:theme="@style/Theme.IShop"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Profile_TypeC"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Notification_TypeC"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Cart_TypeC"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Home_TypeC"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Page_Detail_Product"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Manager.Page_Navigation_Type_M"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Employee.Page_Navigation_Type_E"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Page_Navigation_TypeC"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Sign_Up"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Sign_In"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Intro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
