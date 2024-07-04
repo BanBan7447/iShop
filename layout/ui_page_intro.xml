@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo_is"
+        android:contentDescription="@string/logo_description"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:text="@string/IS"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:text="@string/intro_description"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/secondary_text_color"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/get_started"
+        android:background="@drawable/fill_radius_16"
+        android:textColor="@color/button_text_color"
+        android:padding="12dp" />
+</RelativeLayout>
+
