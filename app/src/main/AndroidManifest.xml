@@ -13,16 +13,55 @@
         android:theme="@style/Theme.IShop"
         tools:targetApi="31">
         <activity
-            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Profile_TypeC"
+            android:name=".Type_Manager.Page_Customer_Profile"
             android:exported="false" />
         <activity
-            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Notification_TypeC"
+            android:name=".Type_Manager.Page_Fix_Product"
             android:exported="false" />
         <activity
-            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Cart_TypeC"
+            android:name=".Type_Manager.Page_Add_Product"
             android:exported="false" />
         <activity
-            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Home_TypeC"
+            android:name=".Type_Manager.Page_Manage_Detail_Product"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment_Drawer_Menu.FragPage_Statistical"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment_Drawer_Menu.FragPage_Manage_Customers"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment_Drawer_Menu.FragPage_Manage_Product"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment_Drawer_Menu.FragPage_Manage_Product_Type"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment_Drawer_Menu.FragPage_Manage_Bill"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment_Drawer_Menu.FragPage_Manage_Orders"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Page_Detail_History_Orders"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Page_History_Orders"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Page_Payment"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Cart"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Fragment_Page_TypeC.FragPage_Home"
             android:exported="false" />
         <activity
             android:name=".Type_Customers.Page_Detail_Product"

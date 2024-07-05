@@ -1,4 +1,4 @@
-package com.example.ishop.Type_Customers.Fragment_Page_TypeC;
+package com.example.ishop.Fragment_Drawer_Menu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,11 +16,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.ishop.R;
 
-public class FragPage_Profile_TypeC extends Fragment {
+public class FragPage_Manage_Orders extends Fragment {
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        View view = layoutInflater.inflate(R.layout.ui_frag_page_profile_type_c, container, false);
+        View view = layoutInflater.inflate(R.layout.ui_frag_page_manage_orders, container, false);
         return view;
     }
 }
