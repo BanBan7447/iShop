@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:background="@drawable/fill_radius_16"
+    android:backgroundTint="@color/Background_Bill">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã đơn hàng:"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Code_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DH0000"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã khách hàng:"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Code_Customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KH0000"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã nhân viên xử lý:"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Code_Employee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NVS0000"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thời gian đặt hàng:"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Date_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14/07/2024"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sản phẩm"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đơn giá"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_toLeftOf="@+id/TT_Quantity_Product"
+            android:layout_marginRight="35dp"/>
+
+        <TextView
+            android:id="@+id/TT_Quantity_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lượng"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/TT_Sum_Quantity_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng số lượng sản phẩm:"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Data_Sum_Quantity_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Price_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền đơn hàng:"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Price_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_toLeftOf="@+id/VND_1"/>
+
+        <TextView
+            android:id="@+id/VND_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đ"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/TT_Delivery_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phí vận chuyển:"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Data_Delivery_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_toLeftOf="@+id/VND_2"/>
+
+        <TextView
+            android:id="@+id/VND_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đ"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng tiền:"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_toLeftOf="@+id/VND_3"/>
+
+        <TextView
+            android:id="@+id/VND_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đ"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trạng thái:"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Satus_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đang xử lý"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Xuất hóa đơn"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/Light"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="@color/Link"/>
+
+
+</LinearLayout>

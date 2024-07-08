@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Dark"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Data_Image_Employee"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/avatar_khanh_vy"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/Custom_Shape"/>
+
+    <TextView
+        android:id="@+id/Data_Code_Employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="MA47218"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/Light"/>
+
+    <TextView
+        android:id="@+id/Data_Name_Employee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Trần Khánh Vy"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/Light"/>
+
+</LinearLayout>

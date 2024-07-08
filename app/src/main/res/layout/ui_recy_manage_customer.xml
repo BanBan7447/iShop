@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp"
+    android:padding="10dp"
+    android:background="@drawable/stroke_raidus_16"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Data_Image_Customer"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/avatar_khanh_vy"
+        app:shapeAppearanceOverlay="@style/Custom_Shape"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã số: "
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/Dark"/>
+
+        <TextView
+            android:id="@+id/Data_Code_Customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KH0000"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Họ tên: "
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/Dark"/>
+
+        <TextView
+            android:id="@+id/Data_Name_Customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trần Khánh Vy"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SDT: "
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/Dark"/>
+
+        <TextView
+            android:id="@+id/Data_SDT_Customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0912214982"
+            android:textSize="16dp"
+            android:textColor="@color/Dark"
+            android:ellipsize="end"
+            android:maxLines="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>

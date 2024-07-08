@@ -2,6 +2,8 @@ package com.example.ishop.Type_Customers.Fragment_Page_TypeC;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 

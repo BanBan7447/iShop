@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/fill_radius_16"
+    android:backgroundTint="@color/Background_Bill">
+    
+    <ImageView
+        android:id="@+id/Data_Image_ProductType"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/img_background"
+        android:scaleType="centerCrop"/>
+
+    <ImageButton
+        android:id="@+id/Btn_Dialog_Fix_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_fix"
+        android:layout_margin="8dp"
+        android:background="none"
+        android:layout_alignParentEnd="true"/>
+    
+    <TextView
+        android:id="@+id/TT_Code_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="Mã: "
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_below="@+id/Data_Image_ProductType"/>
+
+    <TextView
+        android:id="@+id/Data_Code_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="iPE2007"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_below="@+id/Data_Image_ProductType"
+        android:layout_toRightOf="@+id/TT_Code_ProductType"/>
+
+    <TextView
+        android:id="@+id/TT_Name_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="Tên loại: "
+        android:textSize="16dp"
+        android:layout_below="@+id/TT_Code_ProductType"/>
+
+    <TextView
+        android:id="@+id/Data_Name_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="iPhone"
+        android:textSize="16dp"
+        android:layout_below="@+id/TT_Code_ProductType"
+        android:layout_toRightOf="@+id/TT_Name_ProductType"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/TT_Quantity_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Số lượng: "
+        android:textSize="16dp"
+        android:layout_below="@+id/TT_Name_ProductType"/>
+
+    <TextView
+        android:id="@+id/Data_Quantity_ProductType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34 "
+        android:textSize="16dp"
+        android:layout_below="@+id/TT_Name_ProductType"
+        android:layout_toRightOf="@+id/TT_Quantity_ProductType"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mẫu"
+        android:textSize="16dp"
+        android:layout_below="@+id/TT_Name_ProductType"
+        android:layout_toRightOf="@+id/Data_Quantity_ProductType"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+</RelativeLayout>

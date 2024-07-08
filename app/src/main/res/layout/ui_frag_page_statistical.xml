@@ -1,10 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Drawer_Menu.FragPage_Statistical">
+    tools:context=".Fragment_Drawer_Menu.FragPage_Statistical"
+    android:orientation="vertical"
+    android:background="@color/Light"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thống kê doanh thu"
+        android:textSize="20dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng doanh thu: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="47.000.000.000"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_Revenue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đ"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/Data_Total_Revenue"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thống kê khách hàng"
+        android:textSize="20dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Customers_SignUp_App"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng khách hàng đăng ký app: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Customers_SignUp_App"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="47"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_Customers_SignUp_App"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Customer_Purchases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng khách hàng mua hàng: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Customer_Purchases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_Customer_Purchases"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thống kê sản phẩm"
+        android:textSize="20dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/TT_Total_iPhone_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số iPhone được đặt hàng: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_iPhone_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="234"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_iPhone_Orders"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/TT_Total_iPad_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số iPad được đặt hàng: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_iPad_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="425"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_iPad_Orders"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Mac_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Mac được đặt hàng: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Mac_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="425"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_Mac_Orders"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Watch_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Apple Watch được đặt hàng: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Watch_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1531"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_Watch_Orders"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thồng kê đặt hàng"
+        android:textSize="20dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/TT_Total_Products_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng số sản phẩm đặt mua: "
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Total_Products_Orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="54754573"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_toRightOf="@+id/TT_Total_Products_Orders"/>
+    </RelativeLayout>
+</LinearLayout>

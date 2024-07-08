@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Drawer_Menu.FragPage_Manage_Product">
+    tools:context=".Fragment_Drawer_Menu.FragPage_Manage_Product"
+    android:orientation="vertical"
+    android:background="@color/Light">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <SearchView
+        android:id="@+id/Search_Product"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginHorizontal="16dp"
+        android:queryHint="Tìm kiếm sản phẩm"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/stroke_raidus_16"
+        android:queryBackground="@android:color/transparent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FloatBtn_Add_Product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:srcCompat="@drawable/icon_add"
+        app:tint="@color/Light"
+        android:backgroundTint="@color/Link"
+        app:shapeAppearanceOverlay="@style/Custom_Shape"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

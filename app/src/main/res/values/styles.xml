@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        <item name="android:statusBarColor">@color/statusBarColor</item>-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+<!--    </style>-->
+    
+    <style name="ToolBarTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/Dark</item>
+
+    </style>
+</resources>

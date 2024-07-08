@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp">
+
+    <ImageView
+        android:id="@+id/Data_Image_Product"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@mipmap/iphone_15_pro_max"
+        android:layout_marginRight="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/Info_Product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/Data_Image_Product">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã số: "
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Data_Code_Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iPE0000"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên: "
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Data_Name_Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iPhone 15 Pro Max"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đơn giá: "
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Data_Price_Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30.990.000"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="đ"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loại: "
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Data_Name_ProductType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iPhone"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Btn_Page_Fix_Product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Chỉnh sửa"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/Light"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="@color/Link"
+        android:layout_below="@+id/Info_Product"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

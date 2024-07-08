@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="15dp"
+    android:background="@drawable/stroke_bottom">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/iphone_15_pro_max"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Data_Name_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iPhone 15 Pro Max"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/Data_Name_ProductType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="iPhone"
+            android:textSize="16dp"
+            android:textColor="@color/PaleWhite"
+            android:textStyle="bold"
+            android:layout_below="@id/Data_Name_Product"/>
+
+        <TextView
+            android:id="@+id/Data_Price_Product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="30.990.000"
+            android:textSize="20dp"
+            android:textColor="@color/Link"
+            android:textStyle="bold"
+            android:layout_below="@+id/Data_Name_ProductType"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="đ"
+            android:textSize="20dp"
+            android:textColor="@color/Link"
+            android:textStyle="bold"
+            android:layout_below="@+id/Data_Name_ProductType"
+            android:layout_toRightOf="@+id/Data_Price_Product"/>
+
+        <ImageButton
+            android:id="@+id/Btn_Del_ProductCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_delete"
+            android:background="@color/Light"
+            android:layout_alignParentEnd="true"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Data_Name_ProductType">
+
+            <ImageButton
+                android:id="@+id/Btn_Up_ProductCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_up_product"
+                android:background="@color/Light"
+                android:layout_toLeftOf="@+id/Data_Quantity_ProductCart"/>
+
+            <TextView
+                android:id="@+id/Data_Quantity_ProductCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="10"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/Dark"
+                android:layout_toLeftOf="@+id/Btn_Down_ProductCart"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/Btn_Down_ProductCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_down_product"
+                android:background="@color/Light"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
