@@ -7,7 +7,30 @@
     android:padding="12dp"
     android:orientation="vertical"
     android:background="@drawable/fill_radius_16"
-    android:backgroundTint="@color/Background_Bill">
+    android:backgroundTint="@color/Background_Bill"
+    android:id="@+id/Recy_Bill">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã hóa đơn:"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/Data_Code_Bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HD0000"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,29 +84,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã nhân viên xử lý:"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-
-        <TextView
-            android:id="@+id/Data_Code_Employee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="NVS0000"
-            android:textSize="18dp"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thời gian đặt hàng:"
+            android:text="Thời gian xử lý:"
             android:textStyle="bold"
             android:textSize="18dp"/>
 
@@ -96,190 +97,16 @@
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
-    <RelativeLayout
+    <Button
+        android:id="@+id/Btn_Detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sản phẩm"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đơn giá"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_toLeftOf="@+id/TT_Quantity_Product"
-            android:layout_marginRight="35dp"/>
-
-        <TextView
-            android:id="@+id/TT_Quantity_Product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Số lượng"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:id="@+id/TT_Sum_Quantity_Product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tổng số lượng sản phẩm:"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Sum_Quantity_Product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:id="@+id/TT_Total_Price_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tổng tiền đơn hàng:"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Total_Price_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_toLeftOf="@+id/VND_1"/>
-
-        <TextView
-            android:id="@+id/VND_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:id="@+id/TT_Delivery_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Phí vận chuyển:"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Delivery_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_toLeftOf="@+id/VND_2"/>
-
-        <TextView
-            android:id="@+id/VND_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:id="@+id/TT_Total_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tổng tiền:"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Total_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_toLeftOf="@+id/VND_3"/>
-
-        <TextView
-            android:id="@+id/VND_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
-            android:textSize="16dp"
-            android:textColor="@color/Dark"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thời gian xuất hóa đơn"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
-
-        <TextView
-            android:id="@+id/Data_Bill_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="14/07/2024"
-            android:textSize="18dp"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
+        android:layout_marginTop="10dp"
+        android:text="Xem chi tiết"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/Light"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="@color/Link"/>
 
 </LinearLayout>

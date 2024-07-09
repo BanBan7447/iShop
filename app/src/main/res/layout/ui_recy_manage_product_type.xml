@@ -22,7 +22,7 @@
         android:id="@+id/Btn_Dialog_Fix_ProductType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/btn_fix"
+        android:src="@drawable/btn_white_fix"
         android:layout_margin="8dp"
         android:background="none"
         android:layout_alignParentEnd="true"/>

@@ -1,131 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="20dp"
     android:padding="15dp"
     android:orientation="vertical"
-    android:background="@drawable/stroke_raidus_16">
-    
-    <RelativeLayout
+    android:background="@drawable/stroke_raidus_16"
+    android:id="@+id/Recy_History_Orders">
+
+    <TextView
+        android:id="@+id/TT_Code_Bill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
-
-        <TextView
-            android:id="@+id/TT_Code_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mã đơn hàng: "
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Code_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="HD0000"
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:layout_toRightOf="@+id/TT_Code_Orders"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
-
-        <TextView
-            android:id="@+id/TT_Date_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thời gian đặt hàng: "
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Date_Orders"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/TT_Date_Orders"
-            android:text="14/07/2024"
-            android:textColor="@color/Dark"
-            android:textSize="18dp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp">
-
-        <TextView
-            android:id="@+id/TT_Total_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mã đơn hàng: "
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Total_Price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1.140.090.000"
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:layout_toRightOf="@+id/TT_Total_Price"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:layout_toRightOf="@+id/Data_Total_Price"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/TT_Location_Customer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Địa chỉ: "
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/Data_Location_Customer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="95 Trần Thiện Chánh, Phường 12, Quận 10
-Hồ Chí Minh."
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:layout_toRightOf="@+id/TT_Location_Customer"/>
-
-    </RelativeLayout>
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="15dp"
-        android:text="Chi tiết"
+        android:layout_marginBottom="4dp"
+        android:text="Mã đơn hàng: "
         android:textSize="18dp"
-        android:textStyle="bold"
-        android:background="@drawable/fill_radius_16"
-        app:backgroundTint="@color/Link"/>
+        android:textColor="@color/Dark"
+        android:textStyle="bold"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/Data_Code_Bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="HD0000"
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:layout_toRightOf="@+id/TT_Code_Bill"/>
+
+
+    <TextView
+        android:id="@+id/TT_Code_Orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Mã đơn hàng: "
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"
+        android:layout_below="@id/TT_Code_Bill"/>
+
+    <TextView
+        android:id="@+id/Data_Code_Orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="HD0000"
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:layout_toRightOf="@+id/TT_Code_Orders"
+        android:layout_below="@+id/Data_Code_Bill"/>
+
+
+    <TextView
+        android:id="@+id/TT_Date_Orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Thời gian đặt hàng: "
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_Code_Orders"/>
+
+    <TextView
+        android:id="@+id/Data_Date_Orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_toRightOf="@+id/TT_Date_Orders"
+        android:text="14/07/2024"
+        android:textColor="@color/Dark"
+        android:textSize="18dp"
+        android:layout_below="@+id/Data_Code_Orders"/>
+
+
+    <TextView
+        android:id="@+id/TT_Total_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Mã đơn hàng: "
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:textStyle="bold"
+        android:layout_below="@+id/Data_Date_Orders"/>
+
+    <TextView
+        android:id="@+id/Data_Total_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="1.140.090.000"
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:layout_toRightOf="@+id/TT_Total_Price"
+        android:layout_below="@+id/Data_Date_Orders"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="đ"
+        android:textSize="18dp"
+        android:textColor="@color/Dark"
+        android:layout_toRightOf="@+id/Data_Total_Price"
+        android:layout_below="@+id/Data_Date_Orders"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_show_more"
+        android:background="@color/Light"
+        android:rotation="180"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

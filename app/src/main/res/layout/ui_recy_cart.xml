@@ -73,34 +73,32 @@
             android:layout_below="@id/Data_Name_ProductType">
 
             <ImageButton
+                android:id="@+id/Btn_Down_ProductCart"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_down_product"
+                android:background="@color/Light"
+                android:layout_toLeftOf="@+id/Quantity_ProductCart"/>
+
+            <TextView
+                android:id="@+id/Quantity_ProductCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="14dp"
+                android:layout_marginLeft="14dp"
+                android:text="0"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/Dark"
+                android:layout_toLeftOf="@+id/Btn_Up_ProductCart"/>
+
+            <ImageButton
                 android:id="@+id/Btn_Up_ProductCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:src="@drawable/icon_up_product"
                 android:background="@color/Light"
-                android:layout_toLeftOf="@+id/Data_Quantity_ProductCart"/>
-
-            <TextView
-                android:id="@+id/Data_Quantity_ProductCart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:text="10"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="@color/Dark"
-                android:layout_toLeftOf="@+id/Btn_Down_ProductCart"
-                android:layout_centerVertical="true"/>
-
-            <ImageButton
-                android:id="@+id/Btn_Down_ProductCart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/icon_down_product"
-                android:background="@color/Light"
+                android:layout_centerVertical="true"
                 android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.IShop"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_Manage.Page_Detail_Bill"
+            android:exported="false" />
+        <activity
+            android:name=".Type_Customers.Page_Fix_Profile"
+            android:exported="false" />
+        <activity
             android:name=".Activity_Manage.Page_Create_Bill"
             android:exported="false" />
         <activity

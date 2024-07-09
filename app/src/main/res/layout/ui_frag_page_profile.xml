@@ -9,12 +9,20 @@
     android:background="@color/Light"
     android:orientation="vertical">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_blue_fix"
+        android:background="@color/Light"
+        android:layout_gravity="end"
+        android:layout_margin="20dp"/>
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/Data_Image_Customer"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="24dp"
         android:src="@mipmap/avatar_khanh_vy"
         android:scaleType="centerCrop"

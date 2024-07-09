@@ -61,12 +61,11 @@
             android:layout_toRightOf="@+id/Data_Price_Product"/>
 
         <ImageButton
-            android:id="@+id/Btn_Up_Product"
-            android:layout_width="wrap_content"
+            android:id="@+id/Btn_Down_Product"
+            android:layout_width="24dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_up_product"
+            android:src="@drawable/icon_down_product"
             android:background="@color/Light"
-            android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/Quantity_Product"/>
 
         <TextView
@@ -79,14 +78,15 @@
             android:textSize="22dp"
             android:textStyle="bold"
             android:textColor="@color/Dark"
-            android:layout_toLeftOf="@+id/Btn_Down_Product"/>
+            android:layout_toLeftOf="@+id/Btn_Up_Product"/>
 
         <ImageButton
-            android:id="@+id/Btn_Down_Product"
-            android:layout_width="24dp"
+            android:id="@+id/Btn_Up_Product"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_down_product"
+            android:src="@drawable/icon_up_product"
             android:background="@color/Light"
+            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 

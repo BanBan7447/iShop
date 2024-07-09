@@ -20,4 +20,59 @@
         android:background="@drawable/stroke_raidus_16"
         android:queryBackground="@android:color/transparent"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <Button
+            android:id="@+id/Btn_Select_NotDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:text="Chưa xử lý"
+            android:textStyle="bold"
+            android:textColor="@color/Dark"
+            android:textSize="16dp"
+            android:background="@drawable/fill_radius_16"
+            app:backgroundTint="@color/PaleWhite"/>
+
+        <Button
+            android:id="@+id/Btn_Select_Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:text="Đang xử lý"
+            android:textStyle="bold"
+            android:textColor="@color/Light"
+            android:textSize="16dp"
+            android:background="@drawable/fill_radius_16"
+            app:backgroundTint="@color/Link"/>
+
+        <Button
+            android:id="@+id/Btn_Select_Done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Chưa xử lý"
+            android:textStyle="bold"
+            android:textColor="@color/Light"
+            android:textSize="16dp"
+            android:background="@drawable/fill_radius_16"
+            app:backgroundTint="@color/Done"/>
+    </LinearLayout>
+
 </LinearLayout>
