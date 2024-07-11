@@ -21,9 +21,12 @@
         android:textStyle="bold"/>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_Revenue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="6dp"
         android:layout_marginBottom="20dp">
 
         <TextView
@@ -40,17 +43,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="47.000.000.000"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_Revenue"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="đ"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/Data_Total_Revenue"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
 
@@ -63,9 +76,13 @@
         android:textStyle="bold"/>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_Customer_SignUp_App"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp">
 
         <TextView
             android:id="@+id/TT_Total_Customers_SignUp_App"
@@ -81,15 +98,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="47"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_Customers_SignUp_App"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_Customer_Buy_Product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:layout_marginBottom="20dp">
 
         <TextView
@@ -106,9 +134,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="7"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_Customer_Purchases"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
 
@@ -121,15 +158,19 @@
         android:textStyle="bold"/>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_iPhone_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp">
 
         <TextView
             android:id="@+id/TT_Total_iPhone_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số iPhone được đặt hàng: "
+            android:text="Số iPhone được đặt: "
             android:textStyle="bold"
             android:textColor="@color/Dark"
             android:textSize="18dp"/>
@@ -139,21 +180,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="234"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_iPhone_Orders"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_iPad_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="4dp">
 
         <TextView
             android:id="@+id/TT_Total_iPad_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số iPad được đặt hàng: "
+            android:text="Số iPad được đặt: "
             android:textStyle="bold"
             android:textColor="@color/Dark"
             android:textSize="18dp"/>
@@ -163,21 +216,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="425"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_iPad_Orders"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_Mac_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="4dp">
 
         <TextView
             android:id="@+id/TT_Total_Mac_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số Mac được đặt hàng: "
+            android:text="Số Mac được đặt: "
             android:textStyle="bold"
             android:textColor="@color/Dark"
             android:textSize="18dp"/>
@@ -187,22 +252,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="425"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_Mac_Orders"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_Watch_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:layout_marginBottom="20dp">
 
         <TextView
             android:id="@+id/TT_Total_Watch_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số Apple Watch được đặt hàng: "
+            android:text="Số Apple Watch được đặt: "
             android:textStyle="bold"
             android:textColor="@color/Dark"
             android:textSize="18dp"/>
@@ -212,31 +288,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1531"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_Watch_Orders"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thồng kê đặt hàng"
+        android:text="Thống kê mua hàng"
         android:textSize="20dp"
         android:textColor="@color/Dark"
         android:textStyle="bold"/>
 
     <RelativeLayout
+        android:id="@+id/MovePage_Total_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="20dp">
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="6dp">
 
         <TextView
             android:id="@+id/TT_Total_Products_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tổng số sản phẩm đặt mua: "
+            android:text="Tổng đơn hàng được đặt"
             android:textStyle="bold"
             android:textColor="@color/Dark"
             android:textSize="18dp"/>
@@ -246,8 +333,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="54754573"
+            android:textStyle="bold"
             android:textSize="18dp"
-            android:textColor="@color/Dark"
+            android:textColor="@color/Link"
             android:layout_toRightOf="@+id/TT_Total_Products_Orders"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:background="@color/Light"
+            android:rotation="180"
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 </LinearLayout>

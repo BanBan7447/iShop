@@ -243,6 +243,24 @@
                 android:textSize="18dp"
                 android:layout_marginBottom="10dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phương thức thanh toán"
+                android:textStyle="bold"
+                android:textColor="@color/Dark"
+                android:textSize="18dp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/Data_Payment_Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tiền mặt khi nhận hàng"
+                android:textColor="@color/Dark"
+                android:textSize="18dp"
+                android:layout_marginBottom="10dp"/>
+
 
             <View
                 android:layout_width="match_parent"
@@ -259,39 +277,6 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/Dark"/>
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="6dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="14dp"
-                android:background="@color/Line"/>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phương thức thanh toán"
-                android:textSize="20dp"
-                android:textColor="@color/Dark"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"/>
-
-            <TextView
-                android:id="@+id/Data_Payment_Type"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Thanh toán khi nhận hàng"
-                android:textColor="@color/Link"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                android:paddingLeft="10dp"
-                android:drawablePadding="10dp"
-                android:drawableLeft="@drawable/icon_vnd"
-                android:background="@drawable/fill_radius_16"
-                android:backgroundTint="#75B9FF"
-                android:gravity="center_vertical"/>
 
 
             <View
