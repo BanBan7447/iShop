@@ -9,4 +9,13 @@
     android:orientation="vertical"
     android:background="@color/Light">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_index"
+        android:textSize="179.2sp"
+        android:textColor="@color/Dark"
+        android:fontFamily="@font/karla_bold"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>

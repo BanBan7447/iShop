@@ -8,6 +8,104 @@
     tools:context=".Type_Manager.Page_Fix_Product"
     android:background="@color/Light">
 
+    <RelativeLayout
+        android:id="@+id/Title_Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
+        <ImageView
+            android:id="@+id/Icon_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/todo"
+            android:rotation="180"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/Icon_Back"
+            android:text="@string/them_sp"
+            android:textColor="@color/Dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/EdtAdd_Code_Product"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/Title_Page"
+        android:text="@string/nhap_maSP"
+        android:paddingStart="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/Dark"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <EditText
+        android:id="@+id/EdtAdd_Name_Product"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/EdtAdd_Code_Product"
+        android:text="@string/ten_sp"
+        android:paddingStart="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/Dark"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <EditText
+        android:id="@+id/EdtAdd_Price_Product"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/EdtAdd_Name_Product"
+        android:text="@string/nhap_gia"
+        android:paddingStart="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/Dark"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <EditText
+        android:id="@+id/EdtAdd_Description_Product"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/EdtAdd_Price_Product"
+        android:autofillHints=""
+        android:text="@string/mo_ta_sp"
+        android:paddingStart="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/Dark"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <Button
+        android:id="@+id/Btn_Add_Product"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/xac_nhan"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="@color/Link"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

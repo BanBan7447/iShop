@@ -20,20 +20,19 @@ public class Page_Sign_In extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.statusBarColor));
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-//        Button btnSignIn_SI = findViewById(R.id.Btn_SignIn_SI);
-//        btnSignIn_SI.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Page_Sign_In.this, Page_Navigation_Type_C.class));
-//            }
-//        });
-//
-//        Button btnSignUp_SI = findViewById(R.id.Btn_SignUp_SI);
-//        btnSignUp_SI.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Page_Sign_In.this, Page_Sign_Up.class));
-//            }
-//        });
+        Button btnSignIn_SI = findViewById(R.id.Btn_SignIn_SI);
+        btnSignIn_SI.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               startActivity(new Intent(Page_Sign_In.this, Page_Navigation_Type_C.class));
+           }
+       });
+        Button btnSignUp_SI = findViewById(R.id.Btn_SignUp_SI);
+        btnSignUp_SI.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+                startActivity(new Intent(Page_Sign_In.this, Page_Sign_Up.class));
+            }
+        });
     }
 }

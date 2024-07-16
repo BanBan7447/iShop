@@ -9,4 +9,129 @@
     android:orientation="vertical"
     android:background="@color/Light">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="166dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/karla_bold"
+        android:text="@string/is_up"
+        android:textColor="@color/Dark"
+        android:textSize="153.6sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dang_ky"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/Dark"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/Edt_UserName_SU"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:drawableStart="@drawable/icon_user"
+        android:paddingStart="15dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/nhap_ten"
+        android:textColorHint="@color/Dark"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <EditText
+        android:id="@+id/Edt_Email_SU"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:drawableStart="@drawable/icon_email"
+        android:paddingStart="15dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/nh_p_email"
+        android:textColorHint="@color/Dark"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <EditText
+        android:id="@+id/Edt_SDT_SU"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="14dp"
+        android:autofillHints=""
+        android:drawableStart="@drawable/icon_phone_call"
+        android:paddingStart="15dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/nhap_sdt"
+        android:textColorHint="@color/Dark"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <EditText
+        android:id="@+id/Edt_Password_SU"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
+        android:drawableStart="@drawable/icon_password"
+        android:paddingStart="15dp"
+        android:drawablePadding="10dp"
+        android:hint="@string/nhap_mat_khau"
+        android:textColorHint="@color/Dark"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/stroke_raidus_16"/>
+
+    <Button
+        android:id="@+id/Btn_SignUp_SU"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/dang_ky2"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="@color/Dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="@string/da_co_tai_khoan"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/Link"/>
+
+    <Button
+        android:id="@+id/Btn_SignIn_SU"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/dang_nhap2"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="@color/Dark"/>
+
 </LinearLayout>

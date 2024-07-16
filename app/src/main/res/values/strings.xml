@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">iShop</string>
+    <string name="dang_ky1">Đăng Ký</string>
+    <string name="da_co_tai_khoan">Đã có tài khoản?</string>
+    <string name="dang_nhap2">Đăng Nhập</string>
+    <string name="chua_co_tai_khoan">Chưa có tài khoản?</string>
+    <string name="ng_nh_p">Đăng Nhập</string>
+    <string name="email_sdt">Nhập email hoặc sdt</string>
+    <string name="is">IS</string>
+    <string name="nh_p_m_t_kh_u">Nhập mật khẩu</string>
+    <string name="dang_nhap1">Đăng Nhập</string>
+    <string name="is_index">IS</string>
+    <string name="dang_ky2">Đăng Ký</string>
+    <string name="nhap_mat_khau">Nhập mật khẩu</string>
+    <string name="nhap_sdt">Nhập số điện thoại</string>
+    <string name="nh_p_email">Nhập email</string>
+    <string name="nhap_ten">Nhập tên</string>
+    <string name="dang_ky">Đăng Ký</string>
+    <string name="is_up">IS</string>
+    <string name="them_sp">Thêm sản phẩm</string>
+    <string name="nhap_maSP">Nhập mã:</string>
+    <string name="ten_sp">Nhập tên:</string>
+    <string name="nhap_gia">Nhập giá:</string>
+    <string name="mo_ta_sp">Nhập mô tả:</string>
+    <string name="xac_nhan">Xác nhận</string>
+    <string name="todo">TODO</string>
 </resources>
