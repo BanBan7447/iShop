@@ -6,7 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Type_Customers.Fragment_Page_TypeC.FragPage_Home"
+    android:orientation="vertical"
     android:background="@color/Light">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar_Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Light"
+        app:logo="@drawable/icon_logo_app"
+        app:title="iShop"
+        app:titleMarginStart="30dp"/>
 
     <RelativeLayout
         android:id="@+id/Heading_Cart"

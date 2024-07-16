@@ -23,6 +23,7 @@
         app:itemIconTint="@color/icon_nav_bottom"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/menu_bottom_type_c"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:background="@color/Light"/>
 
 </LinearLayout>

@@ -5,11 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Drawer_Menu.FragPage_Statistical"
+    tools:context=".Type_Manager.Page_Statistical_Customer"
     android:orientation="vertical"
-    android:background="@color/Light"
-    android:paddingTop="20dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:background="@color/Light">
+
 
 </LinearLayout>

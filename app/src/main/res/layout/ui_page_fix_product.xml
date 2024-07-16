@@ -8,4 +8,6 @@
     tools:context=".Type_Manager.Page_Fix_Product"
     android:background="@color/Light">
 
+
+
 </RelativeLayout>

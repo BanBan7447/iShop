@@ -24,7 +24,7 @@ public class Page_Sign_In extends AppCompatActivity {
 //        btnSignIn_SI.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                startActivity(new Intent(Page_Sign_In.this, Page_Navigation_Type_M.class));
+//                startActivity(new Intent(Page_Sign_In.this, Page_Navigation_Type_C.class));
 //            }
 //        });
 //

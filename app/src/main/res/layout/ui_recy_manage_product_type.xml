@@ -19,12 +19,11 @@
         android:scaleType="centerCrop"/>
 
     <ImageButton
-        android:id="@+id/Btn_Dialog_Fix_ProductType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/Dialog_Fix_ProductType"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:src="@drawable/btn_white_fix"
-        android:layout_margin="8dp"
-        android:background="none"
+        android:background="@color/transparent"
         android:layout_alignParentEnd="true"/>
     
     <TextView
