@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IShop"
         tools:targetApi="31">
         <activity
+            android:name=".Type_Customers.Page_Detail_List_Product"
+            android:exported="false" />
+        <activity
             android:name=".Demo_ToolBar_Search"
             android:exported="false" />
         <activity

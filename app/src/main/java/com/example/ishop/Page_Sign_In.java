@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.example.ishop.Type_Customers.Page_Detail_List_Product;
 import com.example.ishop.Type_Customers.Page_Navigation_Type_C;
 import com.example.ishop.Type_Manager.Page_Navigation_Type_M;
 
