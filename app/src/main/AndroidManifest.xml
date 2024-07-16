@@ -70,10 +70,10 @@
             android:name=".Fragment_Drawer_Menu.FragPage_Manage_Orders"
             android:exported="false" />
         <activity
-            android:name=".Type_Customers.Page_Detail_History_Orders"
+            android:name=".Activity_Manage.Page_Detail_History_Orders"
             android:exported="false" />
         <activity
-            android:name=".Type_Customers.Page_History_Orders"
+            android:name=".Activity_Manage.Page_History_Orders"
             android:exported="false" />
         <activity
             android:name=".Type_Customers.Page_Payment"
