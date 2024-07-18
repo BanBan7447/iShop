@@ -11,7 +11,7 @@
         android:id="@+id/Data_Image_Employee"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/avatar_khanh_vy"
+        android:src="@mipmap/pic_profile"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/Custom_Shape"/>
 
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="MA47218"
+        android:text="Code"
         android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="@color/Light"/>
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Trần Khánh Vy"
+        android:text="Name"
         android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="@color/Light"/>
