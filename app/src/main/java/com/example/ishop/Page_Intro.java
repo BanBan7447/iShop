@@ -34,27 +34,5 @@ public class Page_Intro extends AppCompatActivity {
             }
         }, 1500);
 
-        // DEMO
-        // Demo
-        // Demo
-
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-        // Sang Hoàng
-
-
     }
 }
