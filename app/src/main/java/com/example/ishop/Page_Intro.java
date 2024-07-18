@@ -38,6 +38,23 @@ public class Page_Intro extends AppCompatActivity {
         // Demo
         // Demo
 
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+        // Sang Hoàng
+
 
     }
 }
