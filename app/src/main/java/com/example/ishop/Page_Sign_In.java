@@ -35,5 +35,7 @@ public class Page_Sign_In extends AppCompatActivity {
                 startActivity(new Intent(Page_Sign_In.this, Page_Sign_Up.class));
             }
         });
+
+        //jyuh
     }
 }
