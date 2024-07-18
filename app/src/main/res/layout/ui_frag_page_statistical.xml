@@ -12,4 +12,155 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp">
 
+    <RelativeLayout
+        android:id="@+id/MovePage_Revenue_Statistical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:id="@+id/Icon_Revenue_Statistical"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="6dp"
+            android:background="@drawable/fill_raidus_6"
+            app:backgroundTint="#00DB65"
+            android:src="@drawable/icon_statistical"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Thống kê doanh thu"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Icon_Revenue_Statistical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:rotation="180"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/MovePage_Customer_Statistical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:id="@+id/Icon_Customer_Statistical"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="6dp"
+            android:background="@drawable/fill_raidus_6"
+            app:backgroundTint="#FF602F"
+            android:src="@drawable/icon_statistical"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Thống kê khách hàng"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Icon_Customer_Statistical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:rotation="180"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/MovePage_Product_Statistical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:id="@+id/Icon_Product_Statistical"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="6dp"
+            android:background="@drawable/fill_raidus_6"
+            app:backgroundTint="#009EFF"
+            android:src="@drawable/icon_statistical"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Thống kê sản phẩm"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Icon_Product_Statistical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:rotation="180"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/MovePage_Orders_Statistical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginBottom="14dp">
+
+        <ImageView
+            android:id="@+id/Icon_Orders_Statistical"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="6dp"
+            android:background="@drawable/fill_raidus_6"
+            app:backgroundTint="#7C7C7C"
+            android:src="@drawable/icon_statistical"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Thống kê mua hàng"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/Icon_Orders_Statistical"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_show_more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:rotation="180"/>
+    </RelativeLayout>
+
 </LinearLayout>
