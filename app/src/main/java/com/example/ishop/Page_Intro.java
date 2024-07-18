@@ -34,10 +34,7 @@ public class Page_Intro extends AppCompatActivity {
             }
         }, 1500);
 
-        // Demo Branches
-        // Demo Branches
-        // Demo Branches// Demo Branches
-        // Demo Branches
+        // DEMO
 
 
     }
