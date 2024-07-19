@@ -19,7 +19,6 @@ import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Bill;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Customers;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Orders;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Product;
-import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Product_Type;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Statistical;
 import com.example.ishop.R;
 import com.google.android.material.navigation.NavigationView;
@@ -52,8 +51,6 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
                     fragment = new FragPage_Manage_Orders();
                 } else if (item.getItemId() == R.id.Fragment_Manage_Bill) {
                     fragment = new FragPage_Manage_Bill();
-                } else if (item.getItemId() == R.id.Fragment_Manage_ProductType) {
-                    fragment = new FragPage_Manage_Product_Type();
                 } else if (item.getItemId() == R.id.Fragment_Manage_Product) {
                     fragment = new FragPage_Manage_Product();
                 } else if (item.getItemId() == R.id.Fragment_Manage_Customers) {
