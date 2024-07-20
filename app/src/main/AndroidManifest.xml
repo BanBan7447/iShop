@@ -22,9 +22,6 @@
             android:name=".Demo_ToolBar_Search"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".Type_Manager.Page_Statistical_Purchase"
             android:exported="false" />
         <activity
@@ -67,9 +64,6 @@
             android:name=".Fragment_Drawer_Menu.FragPage_Manage_Product"
             android:exported="false" />
         <activity
-            android:name=".Fragment_Drawer_Menu.FragPage_Manage_Product"
-            android:exported="false" />
-        <activity
             android:name=".Fragment_Drawer_Menu.FragPage_Manage_Bill"
             android:exported="false" />
         <activity
@@ -106,7 +100,7 @@
             android:name=".Type_Employee.Page_Navigation_Type_E"
             android:exported="false" />
         <activity
-            android:name=".Type_Customers.Page_Navigation_Type_C"
+            android:name=".Page_Intro"
             android:exported="false" />
         <activity
             android:name=".Page_Sign_Up"
@@ -115,7 +109,7 @@
             android:name=".Page_Sign_In"
             android:exported="false" />
         <activity
-            android:name=".Page_Intro"
+            android:name=".Type_Customers.Page_Navigation_Type_C"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
