@@ -6,6 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
+import com.example.ishop.model.Khachhang;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class KhachHangDAO {
     private DBHelper dbHelper;
@@ -15,10 +19,13 @@ public class KhachHangDAO {
     }
 
     //Kiểm tra khách hàng
-    public boolean check_KH(String email, String sdt, String matkhau) {
+    public boolean checkKH(String email, String matkhau) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ? OR sdtKH = ? AND matkhauKH = ?", new String[]{email, sdt, matkhau});
-        return cursor.getCount() > 0;
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?  AND matkhauKH = ?", new String[]{email, matkhau});
+       if(cursor.getCount() !=0){
+           return true;
+       }
+       return false;
     }
 
     //thêm khách hàng
@@ -32,5 +39,18 @@ public class KhachHangDAO {
         values.put("diachiKH", diachi);
         long check = db.insert("KHACHHANG", null, values);
         return check > 0;
+    }
+    public ArrayList<Khachhang>getDS(){
+        ArrayList<Khachhang> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG", null);
+        if(cursor.getCount()!=0){
+            cursor.moveToFirst();
+            do {
+    list.add(new Khachhang(cursor.getString(0),cursor.getString(1)));
+            }while (cursor.moveToNext());
+        }
+
+        return list;
     }
 }
