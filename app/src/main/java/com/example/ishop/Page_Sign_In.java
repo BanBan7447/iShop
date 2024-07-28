@@ -4,10 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.example.ishop.DAO.KhachHangDAO;
+import com.example.ishop.DAO.NhanVienDAO;
 import com.example.ishop.Type_Customers.Page_Detail_List_Product;
 import com.example.ishop.Type_Customers.Page_Navigation_Type_C;
 import com.example.ishop.Type_Manager.Page_Navigation_Type_M;
@@ -35,5 +39,6 @@ public class Page_Sign_In extends AppCompatActivity {
                 startActivity(new Intent(Page_Sign_In.this, Page_Sign_Up.class));
             }
         });
+
     }
 }

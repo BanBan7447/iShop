@@ -1,8 +1,11 @@
 package com.example.ishop.Type_Customers;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +14,23 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ishop.Adapter.LoaiSPAdapter_User1;
+import com.example.ishop.Adapter.SanPhamAdapter;
+import com.example.ishop.DAO.SanPhamDAO;
+import com.example.ishop.Model.SanPham;
 import com.example.ishop.R;
 
+import java.util.ArrayList;
+
 public class Page_Detail_List_Product extends AppCompatActivity {
+    private SanPhamDAO sanPhamDAO;
+    private SanPhamAdapter sanPhamAdapter;
+    private RecyclerView rcv;
+    private ArrayList<SanPham> list;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +39,34 @@ public class Page_Detail_List_Product extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.statusBarColor));
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-        Toolbar toolbar = findViewById(R.id.Toolbar_Page);
-        setSupportActionBar(toolbar);
-    }
+        ImageView Icon_Back_Product_User =findViewById(R.id.Icon_Back_Product_User);
+        TextView Name_Product_Type_User = findViewById(R.id.Name_Product_Type_User);
+        rcv = findViewById(R.id.rcv_list_product_user);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_tool_bar, menu);
-        return super.onCreateOptionsMenu(menu);
+        //get intent
+        Bundle b = getIntent().getExtras();
+        String maLSP = b.getString("maLSP");
+        Name_Product_Type_User.setText(b.getString("tenLSP"));
+
+        //show product of type
+        sanPhamDAO = new SanPhamDAO(this);
+        list = sanPhamDAO.get_SP();
+        ArrayList<SanPham> list1 = new ArrayList<>();
+        for (SanPham sp:list){
+            if (sp.getMaLSP().equals(maLSP))
+                list1.add(sp);
+        }
+
+        sanPhamAdapter = new SanPhamAdapter(this, list1);
+        rcv.setLayoutManager(new GridLayoutManager(this, 2));
+        rcv.setAdapter(sanPhamAdapter);
+
+        //back;
+        Icon_Back_Product_User.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
