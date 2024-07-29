@@ -16,6 +16,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ishop.Model.KhachHang;
+import com.example.ishop.Model.NhanVien;
+
 public class Page_Intro extends AppCompatActivity {
 
     @Override
@@ -33,6 +36,5 @@ public class Page_Intro extends AppCompatActivity {
                 finish();
             }
         }, 1500);
-
     }
 }

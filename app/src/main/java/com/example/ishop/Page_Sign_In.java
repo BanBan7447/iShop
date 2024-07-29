@@ -15,10 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.ishop.DAO.KhachHangDAO;
+
+import com.example.ishop.DAO.NhanVienDAO;
+
 import com.example.ishop.Type_Customers.Page_Detail_List_Product;
 import com.example.ishop.Type_Customers.Page_Navigation_Type_C;
 import com.example.ishop.Type_Manager.Page_Navigation_Type_M;
-import com.example.ishop.model.Khachhang;
 import com.example.ishop.service.LoginService;
 
 import java.util.ArrayList;
@@ -63,6 +65,7 @@ public class Page_Sign_In extends AppCompatActivity {
                 startActivity(new Intent(Page_Sign_In.this, Page_Sign_Up.class));
             }
         });
+
     }
 
     @Override
