@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "DBISHOP", null, 1);
+        super(context, "DBISHOP", null, 5);
     }
 
     @Override
@@ -47,11 +47,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 "emailNV text," +
                 "matkhauNV text)";
         db.execSQL(tNHANVIEN);
-        db.execSQL("INSERT INTO NHANVIEN VALUES('IE101','cme_thanh_phong','Nghiêu Thanh Phong','19','Nam','Hồ Chí Minh','0192805205','thanhphong47@gmail.com','1234')," +
-                "('IE102','cme_tan_sang','Nguyễn Tấn Sang','25','Nữ','Tiền Giang','0251303999','tansang99@gmail.com','1234')," +
-                "('IE103','cme_giang_sinh','Ngô Thị Giáng Sinh','21','Nam','Tây Ninh','0212512202','giangsinh12@gmail.com','1234')," +
-                "('IE104','cme_huy_hoang','Nguyễn Văn Huy Hoàng','20','Nam','Hồ Chí Minh','0201234999','hoang2000@gmail.com','1234')," +
-                "('IE105','cme_guang_liem','Ngô Thị Giáng Sinh','23','Nam','Hồ Chí Minh','0323613201','quangliem01@gmail.com','1234')");
+        db.execSQL("INSERT INTO NHANVIEN VALUES('IE101','cme_thanh_phong','Nghiêu Thanh Phong','19','Nam','Hồ Chí Minh','0192805205','thanhphong47@ishop.vn','1234')," +
+                "('IE102','cme_tan_sang','Nguyễn Tấn Sang','25','Nữ','Tiền Giang','0251303999','tansang99@ishop.vn','1234')," +
+                "('IE103','cme_giang_sinh','Ngô Thị Giáng Sinh','21','Nam','Tây Ninh','0212512202','giangsinh12@ishop.vn','1234')," +
+                "('IE104','cme_huy_hoang','Nguyễn Văn Huy Hoàng','20','Nam','Hồ Chí Minh','0201234999','hoang2000@ishop.vn','1234')," +
+                "('IE105','cme_guang_liem','Ngô Thị Giáng Sinh','23','Nam','Hồ Chí Minh','0323613201','quangliem01@ishop.vn','1234')");
 
         //table QUẢN LÝ
         String tQUANLY = "CREATE TABLE QUANLY(maQL text primary key, " +
@@ -89,7 +89,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "('IO102','IPE2732',1,19299000)," +
                 "('IO102','IPA1017',1,18999000)," +
                 "('IO102','IPM8422',1,32990000)," +
-                "('IO102','IPW1510',1,9990000)," +
+                "('IO102','IPW1510',1,99900000)," +
                 "('IO103','IPE2730',1,26499000)," +
                 "('IO103','IPA1012',1,14990000)," +
                 "('IO103','IPM8404',1,27990000)," +
