@@ -32,7 +32,8 @@ public class KhachHangDAO {
                         cursor.getString(3),
                         cursor.getString(4),
                         cursor.getString(5),
-                        cursor.getString(6)));
+                        cursor.getString(6)
+                        ));
             } while (cursor.moveToNext());
         }
         return list;
@@ -49,7 +50,7 @@ public class KhachHangDAO {
     }
 
     //thêm khách hàng
-    public boolean add_KH(String ma, String anh, String ten, String sdt, String email, String matkhau, String diachi) {
+    public void add_KH(String ma, String anh, String ten, String sdt, String email, String matkhau, String diachi) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("maKH", ma);
@@ -59,8 +60,10 @@ public class KhachHangDAO {
         values.put("emailKH", email);
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
-        long check = db.insert("KHACHHANG", null, values);
-        return check > 0;
+//        long check =
+        db.insert("KHACHHANG", null, values);
+        db.close();
+//        return check > 0;
     }
 
 
@@ -76,6 +79,27 @@ public class KhachHangDAO {
         values.put("diachiKH", diachi);
         long check = db.update("KHACHHANG", values,"maKH = ?", new String[]{ma});
         return check > 0;
+    }
+    //laythongtinkhachhang
+
+        public ArrayList<KhachHang> gettTKH(String email){
+            ArrayList<KhachHang> list = new ArrayList<>();
+            SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?", new String[]{email});
+            if (cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                do {
+                    list.add(new KhachHang(cursor.getString(0),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            cursor.getString(4),
+                            cursor.getString(5),
+                            cursor.getString(6)
+                    ));
+                } while (cursor.moveToNext());
+            }
+            return list;
     }
 
     //xóa khách hàng

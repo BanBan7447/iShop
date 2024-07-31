@@ -48,8 +48,6 @@ public class LoginService extends Service {
         sendBroadcast(intentBR2);
 
 
-
-
         return super.onStartCommand(intent, flags, startId);
     }
 

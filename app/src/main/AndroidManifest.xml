@@ -106,16 +106,19 @@
             android:name=".Page_Sign_Up"
             android:exported="false" />
         <activity
-            android:name=".Page_Sign_In"
-            android:exported="true" />
-        <activity
             android:name=".Type_Customers.Page_Navigation_Type_C"
-            android:exported="true">
+            android:exported="true"
+             />
+        <activity
+            android:name=".Page_Sign_In"
+            android:exported="true"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <service android:name=".service.LoginService"/>
     </application>
