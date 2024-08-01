@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "iShop"
 include(":app")
- 

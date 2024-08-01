@@ -35,10 +35,10 @@ public class HoaDonDAO {
     }
 
     //thêm hóa đơn
-    public boolean add_HD(String maHD, String maDH, String ngay, String maNV, long thanhtien){
+    public boolean add_HD(String maDH, String ngay, String maNV, long thanhtien){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maHD", maHD);
+        values.put("maHD", createIdHD());
         values.put("maDH", maDH);
         values.put("ngayHD", ngay);
         values.put("maNV", maNV);
@@ -66,5 +66,26 @@ public class HoaDonDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("HOADON", "maHD = ?", new String[]{ma});
         return check > 0;
+    }
+
+    //create idHD
+    public String createIdHD(){
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM HOADON", null);
+        if (cursor.getCount()>0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IO101";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

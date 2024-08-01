@@ -12,5 +12,6 @@ public class Page_Manage_Product extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_page_manage_product);
+
     }
 }

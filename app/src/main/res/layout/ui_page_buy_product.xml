@@ -1,112 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Type_Customers.Page_Detail_Product"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_back"
-        android:rotation="180"
-        android:layout_margin="20dp"/>
-
-    <ImageView
-        android:id="@+id/Data_Image_Product"
-        android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:src="@mipmap/iphone_15_pro_max"/>
-    
-    <TextView
-        android:id="@+id/Data_Name_Product"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="iPhone 15 Pro Max"
-        android:textSize="24dp"
-        android:textColor="@color/Dark"
-        android:textStyle="bold"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"/>
+    android:orientation="vertical"
+    tools:context=".Type_Customers.Page_Detail_Product">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/Data_Price_Product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="30.990.000"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textColor="@color/Link"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/Currency_Unit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textColor="@color/Link"
-            android:layout_toRightOf="@+id/Data_Price_Product"/>
+            <ImageView
+                android:id="@+id/Icon_Back_detail_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:rotation="180"
+                android:src="@drawable/icon_back" />
 
-        <ImageButton
-            android:id="@+id/Btn_Down_Product"
-            android:layout_width="24dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_down_product"
-            android:background="@color/Light"
-            android:layout_toLeftOf="@+id/Quantity_Product"/>
+            <ImageView
+                android:id="@+id/Data_Image_Product"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/iphone_15_pro_max" />
 
-        <TextView
-            android:id="@+id/Quantity_Product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="14dp"
-            android:layout_marginLeft="14dp"
-            android:text="0"
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textColor="@color/Dark"
-            android:layout_toLeftOf="@+id/Btn_Up_Product"/>
+            <TextView
+                android:id="@+id/Data_Name_Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:text="iPhone 15 Pro Max"
+                android:textColor="@color/Dark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
 
-        <ImageButton
-            android:id="@+id/Btn_Up_Product"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_up_product"
-            android:background="@color/Light"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mô tả:"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"/>
+                <TextView
+                    android:id="@+id/Data_Price_Product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30.990.000"
+                    android:textColor="@color/Link"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/Data_Description_Product"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="6dp"
-        android:text="iPhone 15 Pro Max kết hợp khung thép không gỉ
+                <TextView
+                    android:id="@+id/Currency_Unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/Data_Price_Product"
+                    android:text=" đ"
+                    android:textColor="@color/Link"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/Btn_Down_Product"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/Quantity_Product"
+                    android:background="@color/Light"
+                    android:src="@drawable/icon_down_product" />
+
+                <TextView
+                    android:id="@+id/Quantity_Product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_toLeftOf="@+id/Btn_Up_Product"
+                    android:text="1"
+                    android:textColor="@color/Dark"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/Btn_Up_Product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/Light"
+                    android:src="@drawable/icon_up_product" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Mô tả:"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Data_Description_Product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="20dp"
+                android:text="iPhone 15 Pro Max kết hợp khung thép không gỉ
 và mặt lưng kính mờ sang trọng. Màn hình
 OLED 6.7 inch tràn viền, công nghệ
 ProMotion 120Hz và chip A17 Bionic đảm bảo
@@ -114,19 +125,20 @@ hiệu năng vượt trội. Hệ thống camera ba
 ống kính và cảm biến LiDAR mang lại khả năng
 chụp ảnh, quay video xuất sắc. Đây là sự kết hợp
 hoàn hảo giữa công nghệ và nghệ thuật."
-        android:textSize="14dp"/>
-
-    <Button
-        android:id="@+id/Btn_AddToCart"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="40dp"
-        android:text="Thêm vào giỏ hàng"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:background="@drawable/fill_radius_16"
-        app:backgroundTint="@color/Link"/>
-
-</LinearLayout>
+                android:textSize="14dp" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/Btn_AddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/fill_radius_16"
+            android:text="Thêm vào giỏ hàng"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="@color/Link" />
+    </RelativeLayout>
+</ScrollView>

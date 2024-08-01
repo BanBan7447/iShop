@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
 import com.example.ishop.Model.DonHang;
+import com.example.ishop.Model.KhachHang;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ public class DonHangDAO {
     }
 
     //lấy danh sách đơn hàng
-    public ArrayList<DonHang> get_DH() {
+    public ArrayList<DonHang> get_ListDH() {
         ArrayList<DonHang> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM DONHANG", null);
@@ -33,6 +34,23 @@ public class DonHangDAO {
             } while (cursor.moveToNext());
         }
         return list;
+    }
+
+    //lấy lay don hàng theo maDH
+    public DonHang get_DH(String ma) {
+        DonHang dh = new DonHang();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM DONHANG WHERE maDH = ?", new String[]{ma});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            dh = new DonHang(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getLong(5));
+        }
+        return dh;
     }
 
     //thêm đơn hàng

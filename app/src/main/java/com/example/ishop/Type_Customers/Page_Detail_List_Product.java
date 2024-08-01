@@ -31,7 +31,6 @@ public class Page_Detail_List_Product extends AppCompatActivity {
     private RecyclerView rcv;
     private ArrayList<SanPham> list;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +59,7 @@ public class Page_Detail_List_Product extends AppCompatActivity {
         sanPhamAdapter = new SanPhamAdapter(this, list1);
         rcv.setLayoutManager(new GridLayoutManager(this, 2));
         rcv.setAdapter(sanPhamAdapter);
+        rcv.scrollToPosition(0);
 
         //back;
         Icon_Back_Product_User.setOnClickListener(new View.OnClickListener() {

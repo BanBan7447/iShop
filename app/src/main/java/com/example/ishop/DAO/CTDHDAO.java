@@ -18,17 +18,19 @@ public class CTDHDAO {
     }
 
     //lấy danh sách CTDH
-    public ArrayList<CTDH> get_CTDH() {
+    public ArrayList<CTDH> get_CTDH(String maDH) {
         ArrayList<CTDH> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM CTDH", null);
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-                list.add(new CTDH(cursor.getString(0),
-                        cursor.getString(1),
-                        cursor.getInt(2),
-                        cursor.getInt(3)));
+                if (cursor.getString(0).equals(maDH)) {
+                    list.add(new CTDH(cursor.getString(0),
+                            cursor.getString(1),
+                            cursor.getInt(2),
+                            cursor.getInt(3)));
+                }
             } while (cursor.moveToNext());
         }
         return list;
