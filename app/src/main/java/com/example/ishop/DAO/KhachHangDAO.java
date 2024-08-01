@@ -56,14 +56,17 @@ public class KhachHangDAO {
     }
 
     //Kiểm tra khách hàng
-    public boolean check_KH(String email, String sdt, String matkhau) {
+    public boolean checkKH(String email, String matkhau) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ? OR sdtKH = ? AND matkhauKH = ?", new String[]{email, sdt, matkhau});
-        return cursor.getCount() > 0;
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?  AND matkhauKH = ?", new String[]{email, matkhau});
+       if(cursor.getCount() !=0){
+           return true;
+       }
+       return false;
     }
 
     //thêm khách hàng
-    public boolean add_KH(String anh, String ten, String sdt, String email, String matkhau, String diachi) {
+    public void add_KH( String anh, String ten, String sdt, String email, String matkhau, String diachi) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("maKH", createIdKH());
@@ -74,7 +77,7 @@ public class KhachHangDAO {
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
         long check = db.insert("KHACHHANG", null, values);
-        return check > 0;
+
     }
 
     //sửa khách hàng
@@ -87,8 +90,29 @@ public class KhachHangDAO {
         values.put("emailKH", email);
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
-        long check = db.update("KHACHHANG", values, "maKH = ?", new String[]{ma});
+        long check = db.update("KHACHHANG", values,"maKH = ?", new String[]{ma});
         return check > 0;
+    }
+    //laythongtinkhachhang
+
+        public ArrayList<KhachHang> gettTKH(String email){
+            ArrayList<KhachHang> list = new ArrayList<>();
+            SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?", new String[]{email});
+            if (cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                do {
+                    list.add(new KhachHang(cursor.getString(0),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            cursor.getString(4),
+                            cursor.getString(5),
+                            cursor.getString(6)
+                    ));
+                } while (cursor.moveToNext());
+            }
+            return list;
     }
 
     //xóa khách hàng
