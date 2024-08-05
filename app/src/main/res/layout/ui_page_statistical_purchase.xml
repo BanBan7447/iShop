@@ -16,7 +16,7 @@
         android:background="@color/Light">
 
         <ImageView
-            android:id="@+id/Icon_Back"
+            android:id="@+id/Icon_Back1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_back"
@@ -89,19 +89,39 @@
         android:background="@drawable/fill_radius_16"
         app:backgroundTint="#E3E3E3"/>
 
-    <TextView
-        android:id="@+id/myDate"
+
+
+    <EditText
+        android:id="@+id/edt_Date"
+        android:layout_marginLeft="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="YYYY/MM/DD"
+        android:textSize="18dp"
+        android:layout_marginTop="-10dp"
+        />
+    <Button
+        android:id="@+id/btnXem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="5dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="14/07/2024"
-        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:text="XEM"
         android:textColor="@color/Dark"
-        android:textSize="24dp"/>
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:background="@drawable/fill_radius_16"
+        app:backgroundTint="#E3E3E3"/>
+
+
 
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Số đơn hàng đã đặt:"
@@ -121,19 +141,11 @@
             android:id="@+id/Data_Sell_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.000.000.000"
             android:textSize="24dp"
             android:textColor="@color/Link"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" đơn"
-            android:textSize="24dp"
-            android:textColor="@color/Link"
-            android:textStyle="bold"/>
     </LinearLayout>
 
 
@@ -157,19 +169,11 @@
             android:id="@+id/Data_Revenue_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.000.000.000"
             android:textSize="24dp"
             android:textColor="@color/Link"
             android:textStyle="bold"
             android:layout_marginLeft="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" đơn"
-            android:textSize="24dp"
-            android:textColor="@color/Link"
-            android:textStyle="bold"/>
     </LinearLayout>
 
 </LinearLayout>

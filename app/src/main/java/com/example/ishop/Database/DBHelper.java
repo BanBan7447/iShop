@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "DBISHOP", null, 5);
+        super(context, "DBISHOP", null, 7);
     }
 
     @Override
@@ -98,23 +98,27 @@ public class DBHelper extends SQLiteOpenHelper {
                 "('IO104','IPA1013',1,25990000)," +
                 "('IO104','IPM8412',1,69990000)," +
                 "('IO104','IPW1506',1,5990000)");
-
         //table HÓA ĐƠN
         String tHOADON = "CREATE TABLE HOADON(maHD text primary key," +
                 "maDH text references DONHANG(maDH)," +
-                "ngayHD text," +
+                "ngayHD date," +
                 "maNV text references NHANVIEN(maNV)," +
                 "thanhtien integer)";
         db.execSQL(tHOADON);
-        db.execSQL("INSERT INTO HOADON VALUES('IB','IO','14/07/2024','IE101', 1400000000)");
+        db.execSQL("INSERT INTO HOADON VALUES('IB','IO','14/07/2024','IE101', 1400000000)," +
+                "('IB','IO','15/07/2024','IE101', 1900000000)," +
+                "('IB','IO','16/07/2024','IE101', 1500000000)," +
+                "('IB','IO','17/07/2024','IE101', 1600000000)," +
+                "('IB','IO','1/08/2024','IE101', 1700000000)," +
+                "('IB','IO','8/08/2024','IE101', 1800000000)");
 
         //table ĐƠN HÀNG
         String tDONHANG = "CREATE TABLE DONHANG(maDH text primary key," +
                 "maKH text references KHACHHANG(maKH)," +
-                "ngayDH text," +
+                "ngayDH date NOT NULL," +
                 "trangthaiDH text," +
                 "maNV text references NHANVIEN(maNV)," +
-                "thanhtien integer)";
+                "thanhtien integer NOT NULL)";
         db.execSQL(tDONHANG);
         db.execSQL("INSERT INTO DONHANG VALUES('IO101','IC1005','14/07/2024','Đã xử lý','IE101', 0)," +
                 "('IO102','IC1006','15/07/2024','Chưa xử lý','IE102', 0)," +

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
+import com.example.ishop.Model.KhachHang;
 import com.example.ishop.Model.QuanLy;
 
 import java.util.ArrayList;
@@ -69,7 +70,7 @@ public class QuanLyDAO {
         values.put("emailQL", email);
         values.put("matkhauQL", matkhau);
         values.put("diachiQL", diachi);
-        long check = db.update("QUANLY", values,"maQL = ?", new String[]{ma});
+        long check = db.update("QUANLY", values,"emailQL = ?", new String[]{email});
         return check > 0;
     }
 
@@ -78,5 +79,26 @@ public class QuanLyDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("QUANLY", "maQL = ?", new String[]{ma});
         return check > 0;
+    }
+    //laythongtinQL
+
+    public ArrayList<QuanLy> gettTQL(String email){
+        ArrayList<QuanLy> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM QUANLy WHERE emailQL= ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            do {
+                list.add(new QuanLy(cursor.getString(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getString(6)
+                ));
+            } while (cursor.moveToNext());
+        }
+        return list;
     }
 }

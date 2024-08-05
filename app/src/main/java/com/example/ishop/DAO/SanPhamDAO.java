@@ -35,6 +35,13 @@ public class SanPhamDAO {
         }
         return list;
     }
+    public  int get_SLP() {
+        ArrayList<SanPham> list = new ArrayList<>();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM SANPHAM", null);
+        int a = cursor.getCount();
+        return a;
+    }
 
     //thêm sản phẩm
     public boolean add_SP(String maSP, String anh, String ten, int gia, String mota, int soluong, String maLSP){

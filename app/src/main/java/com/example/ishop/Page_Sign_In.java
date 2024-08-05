@@ -114,7 +114,7 @@ public class Page_Sign_In extends AppCompatActivity {
         boolean checkQL = quanLyDAO.check_QL(email,sdt,matkhau);
         if(email.isEmpty()|| matkhau.isEmpty()){
             Toast.makeText(Page_Sign_In.this, "Vui long nhập đầy đủ thông tin ", Toast.LENGTH_SHORT).show();
-        }else {
+        }else
             if(checkKH){
                 startActivity(new Intent(Page_Sign_In.this,Page_Navigation_Type_C.class));
                 rememberUser(email,matkhau,ckRememberPass.isChecked());
@@ -125,10 +125,12 @@ public class Page_Sign_In extends AppCompatActivity {
                 startActivity(new Intent(Page_Sign_In.this,Page_Navigation_Type_M.class));
                 rememberUser(email,matkhau,ckRememberPass.isChecked());
             }
-            if(!checkNV || !checkKH ||!checkQL){
+
+        else
+            if(!checkNV && !checkKH && !checkQL){
                 Toast.makeText(Page_Sign_In.this, "Email và mật khẩu không đúng", Toast.LENGTH_SHORT).show();
             }
-        }
+
 
     }
 

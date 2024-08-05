@@ -62,43 +62,81 @@
             android:textStyle="bold"
             android:layout_marginLeft="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
-            android:textSize="24dp"
-            android:textColor="@color/Link"
-            android:textStyle="bold"/>
     </LinearLayout>
 
-    <Button
+    <TextView
         android:id="@+id/btnDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/fill_radius_16"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="5dp"
+        android:text="Chọn thời gian thống kê"
+        android:textColor="@color/Dark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:backgroundTint="#E3E3E3" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_tuNgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="từ ngày"
+            android:layout_marginLeft="20dp"/>
+        <EditText
+            android:id="@+id/edt_tuNgay"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YYYY"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_denNgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đến ngày"
+            android:layout_marginLeft="20dp"/>
+        <EditText
+            android:id="@+id/edt_denNgay"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YYYY"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"/>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_Xem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         android:paddingBottom="5dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginBottom="20dp"
-        android:text="Chọn thời gian thống kê"
+        android:text="XEM"
         android:textColor="@color/Dark"
         android:textStyle="bold"
         android:textSize="16dp"
         android:background="@drawable/fill_radius_16"
         app:backgroundTint="#E3E3E3"/>
-
-    <TextView
-        android:id="@+id/myDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="14/07/2024"
-        android:textStyle="bold"
-        android:textColor="@color/Dark"
-        android:textSize="24dp"/>
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -118,20 +156,11 @@
         <TextView
             android:id="@+id/Data_Revenue"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="100.000.000.000"
-            android:textSize="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
             android:textColor="@color/Link"
-            android:textStyle="bold"
-            android:layout_marginLeft="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="đ"
             android:textSize="24dp"
-            android:textColor="@color/Link"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

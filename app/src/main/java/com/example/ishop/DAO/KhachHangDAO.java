@@ -77,8 +77,18 @@ public class KhachHangDAO {
         values.put("emailKH", email);
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
-        long check = db.update("KHACHHANG", values,"maKH = ?", new String[]{ma});
+        long check = db.update("KHACHHANG", values,"emailKH = ?", new String[]{email});
         return check > 0;
+    }
+
+    public int updatePass(String email, String matkhau){
+        ContentValues values = new ContentValues();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        values.put("hoten",email);
+        values.put("hoten",matkhau);
+        return  db.update("KHACHHANG", values,"emailKH = ?", new String[]{email});
+
+
     }
     //laythongtinkhachhang
 
