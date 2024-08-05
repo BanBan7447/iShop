@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
 import com.example.ishop.Model.NhanVien;
+import com.example.ishop.Model.KhachHang;
 import com.example.ishop.Model.QuanLy;
 
 import java.util.ArrayList;

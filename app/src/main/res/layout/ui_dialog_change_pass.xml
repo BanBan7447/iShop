@@ -1,74 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/Light">
+    android:layout_height="wrap_content"
+    android:background="@color/Light"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="12dp"
         android:text="Đổi mật khẩu"
-        android:textSize="18dp"
-        android:textStyle="bold"
         android:textColor="@color/Dark"
-        android:layout_margin="12dp"/>
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/EdtChange_OldPass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/stroke_raidus_16"
         android:hint="Nhập mật khẩu cũ:"
-        android:textSize="16dp"
-        android:textColorHint="@color/Dark"
-        android:textStyle="bold"
         android:paddingLeft="15dp"
-        android:background="@drawable/stroke_raidus_16"/>
+        android:textColorHint="@color/Dark"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/EdtChange_NewPass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/stroke_raidus_16"
         android:hint="Nhập mật khẩu mới:"
-        android:textSize="16dp"
-        android:textColorHint="@color/Dark"
-        android:textStyle="bold"
         android:paddingLeft="15dp"
-        android:background="@drawable/stroke_raidus_16"/>
+        android:textColorHint="@color/Dark"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/EdtChange_SubmitPass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/stroke_raidus_16"
         android:hint="Xác nhận mật khẩu:"
-        android:textSize="16dp"
-        android:textColorHint="@color/Dark"
-        android:textStyle="bold"
         android:paddingLeft="15dp"
-        android:background="@drawable/stroke_raidus_16"/>
+        android:textColorHint="@color/Dark"
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/Btn_ChangePass"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="12dp"
-        android:text="Xác nhận"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:background="@drawable/fill_radius_16"
-        app:backgroundTint="@color/Link"/>
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/Btn_ChangePass"
+            android:layout_weight="1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/fill_radius_16"
+            android:text="Xác nhận"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/Btn_Cancel_ChangePass"
+            android:layout_weight="1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/fill_radius_16"
+            android:text="Hủy"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>

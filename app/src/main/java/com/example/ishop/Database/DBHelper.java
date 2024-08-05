@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "DBISHOP", null, 10);
+        super(context, "DBISHOP", null, 11);
     }
 
     @Override
@@ -102,7 +102,7 @@ public class DBHelper extends SQLiteOpenHelper {
         //table HÓA ĐƠN
         String tHOADON = "CREATE TABLE HOADON(maHD text primary key," +
                 "maDH text references DONHANG(maDH)," +
-                "ngayHD text," +
+                "ngayHD date," +
                 "maNV text references NHANVIEN(maNV)," +
                 "thanhtien integer)";
         db.execSQL(tHOADON);
@@ -111,10 +111,10 @@ public class DBHelper extends SQLiteOpenHelper {
         //table ĐƠN HÀNG
         String tDONHANG = "CREATE TABLE DONHANG(maDH text primary key," +
                 "maKH text references KHACHHANG(maKH)," +
-                "ngayDH text," +
+                "ngayDH date NOT NULL," +
                 "trangthaiDH text," +
                 "maNV text references NHANVIEN(maNV)," +
-                "thanhtien integer)";
+                "thanhtien integer NOT NULL)";
         db.execSQL(tDONHANG);
         db.execSQL("INSERT INTO DONHANG VALUES('IO101','IC1005','14/07/2024','Đã xử lý','IE101', 0)," +
                 "('IO102','IC1006','15/07/2024','Chưa xử lý','IE102', 0)," +
