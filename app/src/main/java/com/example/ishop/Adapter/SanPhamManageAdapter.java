@@ -6,30 +6,33 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ishop.Model.HoaDon;
+import com.example.ishop.DAO.LoaiSanPhamDAO;
+import com.example.ishop.Model.DonHang;
 import com.example.ishop.Model.SanPham;
 import com.example.ishop.R;
 import com.example.ishop.Type_Customers.Page_Detail_Product;
+import com.example.ishop.Type_Manager.Page_Fix_Product;
+import com.example.ishop.Type_Manager.Page_Manage_Detail_Product;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
-public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHolder> implements Filterable {
+public class SanPhamManageAdapter extends RecyclerView.Adapter<SanPhamManageAdapter.ViewHolder> implements Filterable {
     private Context context;
     private ArrayList<SanPham> list;
     private ArrayList<SanPham> listold;
 
-    public SanPhamAdapter(Context context, ArrayList<SanPham> list) {
+    public SanPhamManageAdapter(Context context, ArrayList<SanPham> list) {
         this.context = context;
         this.list = list;
         this.listold = list;
@@ -39,29 +42,38 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.ui_recy_product_list, parent, false);
+        View view = inflater.inflate(R.layout.ui_recy_manage_product, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.Data_Price_Product.setText(changePrice(list.get(position).getGia()));
-        holder.Data_Name_Product.setText(list.get(position).getTen());
         int id = context.getResources().getIdentifier(list.get(position).getAnh(), "mipmap", context.getPackageName());
         holder.Data_Image_Product.setImageResource(id);
+        holder.Data_Code_Product.setText(list.get(position).getMaSP());
+        holder.Data_Name_Product.setText(list.get(position).getTen());
+        holder.Data_Price_Product.setText(changePrice(list.get(position).getGia()));
+        holder.Data_Name_ProductType.setText(nameType(list.get(position).getMaLSP()));
 
         //send data to detail product
-        holder.all_item.setOnClickListener(new View.OnClickListener() {
+        holder.all_item_m_Product.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, Page_Detail_Product.class);
+                Intent i = new Intent(context, Page_Manage_Detail_Product.class);
                 Bundle b = new Bundle();
-                b.putString("masp", list.get(position).getMaSP());
-                b.putString("anh", list.get(position).getAnh());
-                b.putString("ten", list.get(position).getTen());
-                b.putInt("gia", list.get(position).getSoluong());
-                b.putString("mota", list.get(position).getMota());
-                b.putString("malsp", list.get(position).getMaLSP());
+                b.putString("maSP", list.get(position).getMaSP());
+                i.putExtras(b);
+                context.startActivity(i);
+            }
+        });
+
+        //update
+        holder.Btn_Page_Fix_Product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, Page_Fix_Product.class);
+                Bundle b = new Bundle();
+                b.putString("maSP", list.get(position).getMaSP());
                 i.putExtras(b);
                 context.startActivity(i);
             }
@@ -76,17 +88,20 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
 
 
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView Data_Image_Product;
-        TextView Data_Name_Product, Data_Price_Product;
-        LinearLayout all_item;
+        TextView Data_Name_Product, Data_Price_Product, Data_Name_ProductType, Data_Code_Product;
+        RelativeLayout all_item_m_Product;
+        Button Btn_Page_Fix_Product;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             Data_Image_Product = itemView.findViewById(R.id.Data_Image_Product);
+            Data_Code_Product = itemView.findViewById(R.id.Data_Code_Product);
             Data_Name_Product = itemView.findViewById(R.id.Data_Name_Product);
             Data_Price_Product = itemView.findViewById(R.id.Data_Price_Product);
-            all_item = itemView.findViewById(R.id.all_item);
+            Data_Name_ProductType = itemView.findViewById(R.id.Data_Name_ProductType);
+            Btn_Page_Fix_Product = itemView.findViewById(R.id.Btn_Page_Fix_Product);
+            all_item_m_Product = itemView.findViewById(R.id.all_item_m_Product);
         }
     }
 
@@ -119,6 +134,12 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
                 notifyDataSetChanged();
             }
         };
+    }
+
+    private String nameType(String maLSP) {
+        LoaiSanPhamDAO dao = new LoaiSanPhamDAO(context);
+        String name = dao.get_nameLSP(maLSP);
+        return name != null ? name : "***";
     }
 
     //hàm dấu chấm vào giá

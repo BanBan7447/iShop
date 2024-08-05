@@ -50,34 +50,34 @@ public class DonHangDAO {
                     cursor.getString(4),
                     cursor.getLong(5));
         }
+        cursor.close();
         return dh;
     }
 
     //thêm đơn hàng
-    public boolean add_DH(String maDH, String maKH, String ngay, String trangthai, String maNV, long thanhtien){
+    public boolean add_DH( String maKH, String ngay, String trangthai, String maNV, long thanhtien){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maDH", maDH);
+        values.put("maDH", createIdDH());
         values.put("maKH", maKH);
         values.put("ngayDH", ngay);
         values.put("trangthaiDH", trangthai);
         values.put("maNV", maNV);
-        values.put("thanhtienDH", thanhtien);
+        values.put("thanhtien", thanhtien);
         long check = db.insert("DONHANG", null, values);
         return check > 0;
     }
 
 
     //sửa đơn hàng
-    public boolean update_DH(String maDH, String maKH, String ngay, String trangthai, String maNV, long thanhtien) {
+    public boolean update_DH(String maDH,String maKH, String ngay, String trangthai, String maNV, long thanhtien) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maDH", maDH);
         values.put("maKH", maKH);
         values.put("ngayDH", ngay);
         values.put("trangthaiDH", trangthai);
         values.put("maNV", maNV);
-        values.put("thanhtienDH", thanhtien);
+        values.put("thanhtien", thanhtien);
         long check = db.update("DONHANG", values, "maDH = ?", new String[]{maDH});
         return check > 0;
     }
@@ -87,5 +87,26 @@ public class DonHangDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("DONHANG", "maDH = ?", new String[]{ma});
         return check > 0;
+    }
+
+    //create idDH
+    public String createIdDH(){
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM DONHANG", null);
+        if (cursor.getCount()>0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IO101";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

@@ -1,10 +1,13 @@
 package com.example.ishop.Type_Customers;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -30,6 +33,7 @@ public class Page_Detail_List_Product extends AppCompatActivity {
     private SanPhamAdapter sanPhamAdapter;
     private RecyclerView rcv;
     private ArrayList<SanPham> list;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,28 @@ public class Page_Detail_List_Product extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        timkiem();
+    }
+
+    private void timkiem() {
+        searchView = findViewById(R.id.Search_Orders);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                sanPhamAdapter.getFilter().filter(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                sanPhamAdapter.getFilter().filter(newText);
+                return true;
             }
         });
     }

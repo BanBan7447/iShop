@@ -12,7 +12,8 @@ import java.util.ArrayList;
 
 public class SanPhamDAO {
     private DBHelper dbHelper;
-    public SanPhamDAO(Context context){
+
+    public SanPhamDAO(Context context) {
         dbHelper = new DBHelper(context);
     }
 
@@ -36,11 +37,29 @@ public class SanPhamDAO {
         return list;
     }
 
+    //lấy sanpham theo maSP
+    public SanPham get_SPP(String ma) {
+        SanPham sp = new SanPham();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM SANPHAM WHERE masp = ?", new String[]{ma});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            sp = new SanPham(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getInt(3),
+                    cursor.getString(4),
+                    cursor.getInt(5),
+                    cursor.getString(6));
+        }
+        return sp;
+    }
+
     //thêm sản phẩm
-    public boolean add_SP(String maSP, String anh, String ten, int gia, String mota, int soluong, String maLSP){
+    public boolean add_SP(String anh, String ten, int gia, String mota, int soluong, String maLSP) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maSP", maSP);
+        values.put("maSP", createIdSP(maLSP));
         values.put("anhSP", anh);
         values.put("tenSP", ten);
         values.put("giaSP", gia);
@@ -72,5 +91,44 @@ public class SanPhamDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("SANPHAM", "maSP = ?", new String[]{ma});
         return check > 0;
+    }
+
+    //create idSP
+    public String createIdSP(String maLSP) {
+        String s = creatmaLSP(maLSP);
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM SANPHAM WHERE maSP = ?", new String[]{s + "*"});
+        if (cursor.getCount() > 0) {
+            cursor.moveToLast();
+            String st = cursor.getString(0);
+            cursor.close();
+            return upNumber(st);
+        } else {
+
+            return s + 1;
+        }
+    }
+
+    private String creatmaLSP(String maLSP) {
+        String s = "";
+        if (maLSP.equals("IP27"))
+            s = "IPE";
+        if (maLSP.equals("IA10"))
+            s = "IPA";
+        if (maLSP.equals("IM84"))
+            s = "IPM";
+        if (maLSP.equals("IW15"))
+            s = "IPW";
+        if (s.isEmpty()) {
+            return maLSP;
+        } else
+            return s;
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

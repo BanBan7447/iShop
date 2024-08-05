@@ -33,15 +33,37 @@ public class LoaiSanPhamDAO {
         return list;
     }
 
+    //lấy ten loại sản phẩm
+    public String get_nameLSP(String maLSP) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM LOAISANPHAM WHERE maLSP = ? ", new String[]{maLSP});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            return cursor.getString(2);
+        }
+        return "";
+    }
+
+
     //thêm loại sản phẩm
-    public boolean add_LSP(String ma, String anh, String ten) {
+    public boolean add_LSP(String maLSP, String anh, String ten) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maLSP", ma);
+        values.put("maLSP", maLSP);
         values.put("anhLSP", anh);
         values.put("tenLSP", ten);
         long check = db.insert("LOAISANPHAM", null, values);
         return check > 0;
+    }
+
+    //check maLSP
+    public boolean checkLSP(String maLSP) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM MALOAISANPHAM WHERE maLSP = ?", new String[]{maLSP});
+        if (cursor.getCount() > 0) {
+            return true;
+        }
+        return false;
     }
 
     //sửa loại sản phẩm
@@ -60,5 +82,7 @@ public class LoaiSanPhamDAO {
         long check = db.delete("LOAISANPHAM", "maLSP = ?", new String[]{ma});
         return check > 0;
     }
+
+
 }
 

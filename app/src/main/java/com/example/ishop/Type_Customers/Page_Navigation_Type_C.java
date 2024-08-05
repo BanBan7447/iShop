@@ -1,7 +1,8 @@
 package com.example.ishop.Type_Customers;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -11,11 +12,15 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.ishop.DAO.GioHangDAO;
+import com.example.ishop.DAO.KhachHangDAO;
+import com.example.ishop.Model.SanPham;
 import com.example.ishop.R;
 import com.example.ishop.Type_Customers.Fragment_Page_TypeC.FragPage_Cart;
 import com.example.ishop.Type_Customers.Fragment_Page_TypeC.FragPage_Home;
 import com.example.ishop.Type_Customers.Fragment_Page_TypeC.FragPage_Notification;
 import com.example.ishop.Type_Customers.Fragment_Page_TypeC.FragPage_Profile;
+import com.example.ishop.Utils.Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -39,17 +44,17 @@ public class Page_Navigation_Type_C extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment = null;
-                if (item.getItemId() == R.id.Fragment_Home){
+                if (item.getItemId() == R.id.Fragment_Home) {
                     fragment = new FragPage_Home();
                 } else if (item.getItemId() == R.id.Fragment_Cart) {
                     fragment = new FragPage_Cart();
                 } else if (item.getItemId() == R.id.Fragment_Notification) {
                     fragment = new FragPage_Notification();
-                }else {
+                } else {
                     fragment = new FragPage_Profile();
                 }
 
-                if (fragment != null){
+                if (fragment != null) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.Layout_Bottom, fragment).commit();
                 }
 
@@ -58,5 +63,34 @@ public class Page_Navigation_Type_C extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (!Utils.listGioHang.isEmpty()) {
+            GioHangDAO gioHangDAO = new GioHangDAO(this);
+            SharedPreferences pref = getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
+            String email = pref.getString("Email", "");
+            KhachHangDAO khachHangDAO = new KhachHangDAO(this);
+            String maKH = khachHangDAO.gettTKH(email).getMa();
+            if (!maKH.isEmpty()) {
+                for (SanPham sp : Utils.listGioHang) {
+                    gioHangDAO.add_SP(maKH, sp.getAnh(), sp.getTen(), changeNameType(sp.getMaLSP()), sp.getGia(), sp.getSoluong());
+                }
+            }
+        }
+    }
+
+    private String changeNameType(String s) {
+        if (s.equals("IP27"))
+            return "iPhone";
+        if (s.equals("IA10"))
+            return "iPad";
+        if (s.equals("IM84"))
+            return "Mac";
+        if (s.equals("IW15"))
+            return "Apple Watch";
+        return "";
     }
 }

@@ -37,7 +37,7 @@ public class KhachHangDAO {
         return list;
     }
 
-    //lấy danh sách khách hàng theo maKH
+    //lấy khách hàng theo maKH
     public KhachHang get_KH(String ma) {
         KhachHang kh = new KhachHang();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
@@ -51,6 +51,29 @@ public class KhachHangDAO {
                     cursor.getString(4),
                     cursor.getString(5),
                     cursor.getString(6));
+        } else {
+            kh = null;
+        }
+        return kh;
+    }
+
+    //laythongtinkhachhang
+    public KhachHang gettTKH(String email) {
+        KhachHang kh = new KhachHang();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            kh = new KhachHang(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        } else {
+            kh = null;
         }
         return kh;
     }
@@ -59,14 +82,14 @@ public class KhachHangDAO {
     public boolean checkKH(String email, String matkhau) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?  AND matkhauKH = ?", new String[]{email, matkhau});
-       if(cursor.getCount() !=0){
-           return true;
-       }
-       return false;
+        if (cursor.getCount() != 0) {
+            return true;
+        }
+        return false;
     }
 
     //thêm khách hàng
-    public void add_KH( String anh, String ten, String sdt, String email, String matkhau, String diachi) {
+    public void add_KH(String anh, String ten, String sdt, String email, String matkhau, String diachi) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("maKH", createIdKH());
@@ -90,29 +113,8 @@ public class KhachHangDAO {
         values.put("emailKH", email);
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
-        long check = db.update("KHACHHANG", values,"maKH = ?", new String[]{ma});
+        long check = db.update("KHACHHANG", values, "maKH = ?", new String[]{ma});
         return check > 0;
-    }
-    //laythongtinkhachhang
-
-        public ArrayList<KhachHang> gettTKH(String email){
-            ArrayList<KhachHang> list = new ArrayList<>();
-            SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-            Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?", new String[]{email});
-            if (cursor.getCount() > 0) {
-                cursor.moveToFirst();
-                do {
-                    list.add(new KhachHang(cursor.getString(0),
-                            cursor.getString(1),
-                            cursor.getString(2),
-                            cursor.getString(3),
-                            cursor.getString(4),
-                            cursor.getString(5),
-                            cursor.getString(6)
-                    ));
-                } while (cursor.moveToNext());
-            }
-            return list;
     }
 
     //xóa khách hàng
@@ -123,10 +125,10 @@ public class KhachHangDAO {
     }
 
     //create idKH
-    public String createIdKH(){
+    public String createIdKH() {
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG", null);
-        if (cursor.getCount()>0) {
+        if (cursor.getCount() > 0) {
             cursor.moveToLast();
             String s = cursor.getString(0);
             cursor.close();

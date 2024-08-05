@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="175dp"
+    android:id="@+id/all_item_m_ProductT"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="10dp"
     android:layout_marginBottom="20dp"
-    android:gravity="center"
     android:orientation="vertical"
     android:background="@drawable/fill_radius_16"
     android:backgroundTint="@color/Background_Bill">
     
     <ImageView
         android:id="@+id/Data_Image_ProductType"
-        android:layout_width="175dp"
+        android:layout_width="wrap_content"
         android:layout_height="175dp"
         android:layout_marginBottom="8dp"
         android:src="@mipmap/img_background"
@@ -82,7 +82,7 @@
         android:id="@+id/Data_Quantity_ProductType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="34 "
+        android:text="34"
         android:textSize="16dp"
         android:layout_below="@+id/TT_Name_ProductType"
         android:layout_toRightOf="@+id/TT_Quantity_ProductType"
@@ -92,7 +92,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mẫu"
+        android:text=" mẫu"
         android:textSize="16dp"
         android:layout_below="@+id/TT_Name_ProductType"
         android:layout_toRightOf="@+id/Data_Quantity_ProductType"

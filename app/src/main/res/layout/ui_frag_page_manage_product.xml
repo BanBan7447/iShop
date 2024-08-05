@@ -9,6 +9,23 @@
     android:orientation="vertical"
     android:background="@color/Light">
 
+    <SearchView
+        android:id="@+id/Search_Product_M"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginHorizontal="16dp"
+        android:queryHint="Tìm kiếm loại sản phẩm"
+        android:iconifiedByDefault="false"
+        android:background="@drawable/stroke_raidus_16"
+        android:queryBackground="@android:color/transparent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_list_productType_M"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Search_Product_M"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/FloatBtn_Add_ProductType"
         android:layout_width="wrap_content"

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ishop.Activity_Manage.Page_Detail_History_Orders;
+import com.example.ishop.Activity_Manage.Page_History_Orders;
 import com.example.ishop.Adapter.CartAdapter;
 import com.example.ishop.R;
 import com.example.ishop.Type_Customers.Page_Payment;
@@ -27,6 +30,7 @@ public class FragPage_Cart extends Fragment {
     private TextView Quantity_Cart_Product;
     private Runnable runnable;
     private Handler handler;
+    private ImageButton icon_history;
 
     @Nullable
     @Override
@@ -35,6 +39,7 @@ public class FragPage_Cart extends Fragment {
 
         Quantity_Cart_Product = view.findViewById(R.id.Quantity_Cart_Product);
         btn_order = view.findViewById(R.id.btn_order);
+        icon_history = view.findViewById(R.id.icon_history);
         rcv = view.findViewById(R.id.rcv_list_product_cart);
 
         handler = new Handler();
@@ -50,6 +55,13 @@ public class FragPage_Cart extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), Page_Payment.class));
+            }
+        });
+
+        icon_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), Page_History_Orders.class));
             }
         });
         return view;

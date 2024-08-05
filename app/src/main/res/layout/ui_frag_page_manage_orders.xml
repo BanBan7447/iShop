@@ -17,6 +17,8 @@
         android:layout_marginHorizontal="16dp"
         android:queryHint="Tìm kiếm đơn hàng"
         android:iconifiedByDefault="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:background="@drawable/stroke_raidus_16"
         android:queryBackground="@android:color/transparent"/>
 

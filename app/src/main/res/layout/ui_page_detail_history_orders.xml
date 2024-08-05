@@ -211,6 +211,10 @@
                 android:textStyle="bold"
                 android:textColor="@color/Dark"/>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_list_bill_historyDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <View
                 android:layout_width="match_parent"
@@ -310,7 +314,7 @@
                     android:id="@+id/Data_Delivery_Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
+                    android:text="0"
                     android:textSize="16dp"
                     android:textColor="@color/Dark"
                     android:layout_toLeftOf="@+id/VND_2"/>
@@ -319,7 +323,7 @@
                     android:id="@+id/VND_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="đ"
+                    android:text=" đ"
                     android:textSize="16dp"
                     android:textColor="@color/Dark"
                     android:layout_alignParentEnd="true"/>

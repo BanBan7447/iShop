@@ -1,10 +1,13 @@
 package com.example.ishop.Fragment_Drawer_Menu;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +28,7 @@ public class FragPage_Manage_Orders extends Fragment {
     private DonHangDAO donHangDAO;
     private DonHangAdapter donHangAdapter;
     private ArrayList<DonHang> list;
+    private SearchView searchView;
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
@@ -41,10 +45,18 @@ public class FragPage_Manage_Orders extends Fragment {
         Btn_Progress = view.findViewById(R.id.Btn_Select_Progress);
         Btn_Done = view.findViewById(R.id.Btn_Select_Done);
         rcv = view.findViewById(R.id.rcv_manage_orders);
+        searchView = view.findViewById(R.id.Search_Orders);
+
+        timkiem();
+
+        return view;
+    }
+
+
+    private void loaddata(){
         donHangDAO = new DonHangDAO(getContext());
         list = donHangDAO.get_ListDH();
         ArrayList<DonHang> listNotDone = new ArrayList<>(), listProgress = new ArrayList<>(), listDone = new ArrayList<>();
-
         for (DonHang dh : list) {
             if (dh.getTrangthai().equals("Chưa xử lý")) {
                 listNotDone.add(dh);
@@ -64,7 +76,6 @@ public class FragPage_Manage_Orders extends Fragment {
         showNotDone(listNotDone);
         showProgress(listProgress);
         showDone(listDone);
-        return view;
     }
 
     //
@@ -99,5 +110,36 @@ public class FragPage_Manage_Orders extends Fragment {
                 rcv.setAdapter(donHangAdapter);
             }
         });
+    }
+
+    private void timkiem() {
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                donHangAdapter = new DonHangAdapter(getContext(), list);
+                rcv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+                rcv.setAdapter(donHangAdapter);
+                donHangAdapter.getFilter().filter(query);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                donHangAdapter = new DonHangAdapter(getContext(), list);
+                rcv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
+                rcv.setAdapter(donHangAdapter);
+                donHangAdapter.getFilter().filter(newText);
+                return true;
+            }
+        });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loaddata();
     }
 }

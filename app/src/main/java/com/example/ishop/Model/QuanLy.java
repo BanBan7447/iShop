@@ -7,4 +7,5 @@ public class QuanLy extends KhachHang{
         super(ma, anh, ten, sdt, email, matkhau, diachi);
 
 }
+    public QuanLy(){}
 }

@@ -52,7 +52,7 @@ public class Page_Sign_Up extends AppCompatActivity {
                 if(username.isEmpty() || email.isEmpty() || sdt.isEmpty() || pass.isEmpty()){
                     Toast.makeText(Page_Sign_Up.this, "Vui lòng nhập đầy đủ thông tin  ", Toast.LENGTH_SHORT).show();
                 }else {
-                    khachHangDAO.add_KH("","",username,sdt,email,pass,"");
+                    khachHangDAO.add_KH("",username,sdt,email,pass,"");
                     Toast.makeText(Page_Sign_Up.this, "Đăng kí thành công", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(Page_Sign_Up.this,Page_Sign_In.class));
                 }

@@ -37,7 +37,6 @@ public class Page_List_Product_Type extends AppCompatActivity {
             return insets;
         });
 
-        loaiSanPhamDAO = new LoaiSanPhamDAO(this);
         rcv_list_productType = findViewById(R.id.rcv_list_productType);
         Icon_Back = findViewById(R.id.Icon_Back_ListType_User);
 
@@ -56,6 +55,7 @@ public class Page_List_Product_Type extends AppCompatActivity {
 
     //load data
     private void loadData() {
+        loaiSanPhamDAO = new LoaiSanPhamDAO(this);
         listlsp = loaiSanPhamDAO.get_LSP();
         loaiSanPhameAdapterUser = new LoaiSPAdapter_User2(this, listlsp);
         rcv_list_productType.setLayoutManager(new GridLayoutManager(this, 2));

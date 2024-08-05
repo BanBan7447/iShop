@@ -13,23 +13,23 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ishop.Model.HoaDon;
+import com.example.ishop.Model.KhachHang;
 import com.example.ishop.Model.SanPham;
 import com.example.ishop.R;
+import com.example.ishop.Type_Customers.Fragment_Page_TypeC.FragPage_Profile;
 import com.example.ishop.Type_Customers.Page_Detail_Product;
+import com.example.ishop.Type_Manager.Page_Customer_Profile;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
-public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHolder> implements Filterable {
+public class KhacHangAdapter extends RecyclerView.Adapter<KhacHangAdapter.ViewHolder> implements Filterable {
     private Context context;
-    private ArrayList<SanPham> list;
-    private ArrayList<SanPham> listold;
+    private ArrayList<KhachHang> list;
+    private ArrayList<KhachHang> listold;
 
-    public SanPhamAdapter(Context context, ArrayList<SanPham> list) {
+    public KhacHangAdapter(Context context, ArrayList<KhachHang> list) {
         this.context = context;
         this.list = list;
         this.listold = list;
@@ -39,34 +39,29 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.ui_recy_product_list, parent, false);
+        View view = inflater.inflate(R.layout.ui_recy_manage_customer, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.Data_Price_Product.setText(changePrice(list.get(position).getGia()));
-        holder.Data_Name_Product.setText(list.get(position).getTen());
         int id = context.getResources().getIdentifier(list.get(position).getAnh(), "mipmap", context.getPackageName());
-        holder.Data_Image_Product.setImageResource(id);
+        holder.Data_Image_Customer.setImageResource(id);
+        holder.Data_Code_Customer.setText(list.get(position).getMa());
+        holder.Data_Name_Customer.setText(list.get(position).getTen());
+        holder.Data_SDT_Customer.setText(list.get(position).getSdt());
 
         //send data to detail product
-        holder.all_item.setOnClickListener(new View.OnClickListener() {
+        holder.all_item_u.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, Page_Detail_Product.class);
+                Intent i = new Intent(context, Page_Customer_Profile.class);
                 Bundle b = new Bundle();
-                b.putString("masp", list.get(position).getMaSP());
-                b.putString("anh", list.get(position).getAnh());
-                b.putString("ten", list.get(position).getTen());
-                b.putInt("gia", list.get(position).getSoluong());
-                b.putString("mota", list.get(position).getMota());
-                b.putString("malsp", list.get(position).getMaLSP());
+                b.putString("maKH", list.get(position).getMa());
                 i.putExtras(b);
                 context.startActivity(i);
             }
         });
-
     }
 
     @Override
@@ -74,19 +69,17 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
         return list.size();
     }
 
-
-
-
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView Data_Image_Product;
-        TextView Data_Name_Product, Data_Price_Product;
-        LinearLayout all_item;
+        ImageView Data_Image_Customer;
+        TextView Data_Code_Customer, Data_Name_Customer, Data_SDT_Customer;
+        LinearLayout all_item_u;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            Data_Image_Product = itemView.findViewById(R.id.Data_Image_Product);
-            Data_Name_Product = itemView.findViewById(R.id.Data_Name_Product);
-            Data_Price_Product = itemView.findViewById(R.id.Data_Price_Product);
-            all_item = itemView.findViewById(R.id.all_item);
+            Data_Image_Customer = itemView.findViewById(R.id.Data_Image_Customer);
+            Data_Code_Customer = itemView.findViewById(R.id.Data_Code_Customer);
+            Data_Name_Customer = itemView.findViewById(R.id.Data_Name_Customer);
+            Data_SDT_Customer = itemView.findViewById(R.id.Data_SDT_Customer);
+            all_item_u = itemView.findViewById(R.id.all_item_u);
         }
     }
 
@@ -99,8 +92,8 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
                 if (stsea.isEmpty()) {
                     list = listold;
                 } else {
-                    ArrayList<SanPham> listclone = new ArrayList<>();
-                    for (SanPham sp : listold) {
+                    ArrayList<KhachHang> listclone = new ArrayList<>();
+                    for (KhachHang sp : listold) {
                         if (sp.getTen().toLowerCase().contains(stsea.toLowerCase())) {
                             listclone.add(sp);
                         }
@@ -115,23 +108,9 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
 
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
-                list = (ArrayList<SanPham>) results.values;
+                list = (ArrayList<KhachHang>) results.values;
                 notifyDataSetChanged();
             }
         };
-    }
-
-    //hàm dấu chấm vào giá
-    String changePrice(int n) {
-        String s = "";
-        while (n / 1000 > 0) {
-            if (n % 1000 == 0) {
-                s += ".000";
-            } else {
-                s = "." + n % 1000 + s;
-            }
-            n = n / 1000;
-        }
-        return n + s;
     }
 }
