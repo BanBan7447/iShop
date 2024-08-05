@@ -121,12 +121,13 @@ public class KhachHangDAO {
     public int updatePass(String email, String matkhau){
         ContentValues values = new ContentValues();
         SQLiteDatabase db = dbHelper.getWritableDatabase();
-        values.put("hoten",email);
-        values.put("hoten",matkhau);
-        return  db.update("KHACHHANG", values,"emailKH = ?", new String[]{email});
+        values.put("hoten", email);
+        values.put("hoten", matkhau);
+        return db.update("KHACHHANG", values, "emailKH = ?", new String[]{email});
 
 
     }
+
     //xóa khách hàng
     public boolean delete_KH(String ma) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();

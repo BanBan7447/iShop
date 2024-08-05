@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IShop"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_Manage.Page_Header_Menu"
+            android:exported="false" />
+        <activity
             android:name=".Type_Customers.Page_List_Product_Type"
             android:exported="false" />
         <activity
@@ -69,7 +72,6 @@
         <activity
             android:name=".Fragment_Drawer_Menu.FragPage_Manage_Bill"
             android:exported="false" />
-
         <activity
             android:name=".Activity_Manage.Page_Detail_History_Orders"
             android:exported="false" />
@@ -94,7 +96,6 @@
         <activity
             android:name=".Type_Customers.Page_Detail_Product"
             android:exported="false" />
-
         <activity
             android:name=".Type_Employee.Page_Navigation_Type_E"
             android:exported="false" />
@@ -105,9 +106,6 @@
             android:name=".Page_Sign_Up"
             android:exported="false" />
         <activity
-            android:name=".Page_Sign_In"
-            android:exported="false" />
-        <activity
             android:name=".Type_Customers.Page_Navigation_Type_C"
             android:exported="false" />
         <activity
@@ -115,6 +113,9 @@
             android:exported="false" />
         <activity
             android:name=".Type_Manager.Page_Navigation_Type_M"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Sign_In"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

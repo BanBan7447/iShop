@@ -29,6 +29,7 @@ import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Customers;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Orders;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Product;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Statistical;
+import com.example.ishop.Model.NhanVien;
 import com.example.ishop.Model.QuanLy;
 import com.example.ishop.Page_Sign_In;
 import com.example.ishop.R;
@@ -121,8 +122,8 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
         QuanLyDAO quanLyDAO = new QuanLyDAO(this);
         SharedPreferences pref = getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
         String email = pref.getString("Email","");
-        ArrayList<QuanLy> list = quanLyDAO.gettTQL(email);
-        String olPass = list.get(pQL).getMatkhauKH();
+        NhanVien ql = quanLyDAO.get_QL(email);
+        String olPass = ql.getMatkhau();
 
 
         AlertDialog alertDialog = builder.create();
@@ -145,7 +146,7 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
                         Toast.makeText(Page_Navigation_Type_M.this, "Vui lòng nhập lại mật khẩu mới trùng khớp  ", Toast.LENGTH_SHORT).show();
                     }
                     if(oldPass.equals(olPass)){
-                        boolean check = quanLyDAO.update_QL("","","","",email,newPass,"");
+                        boolean check = quanLyDAO.update_QL(ql.getMa(),ql.getAnh(),ql.getTen(),ql.getSdt(),email,newPass,ql.getDiachi());
                         if(check){
                             EdtChange_OldPass.setText("");
                             EdtChange_SubmitPass.setText("");
@@ -153,13 +154,9 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
                             Toast.makeText(Page_Navigation_Type_M.this, " thay đổi mật khẩu thành công  ", Toast.LENGTH_SHORT).show();
                             outAPP();
                             // startActivity(new Intent(getContext().this,Page_Sign_In.class));
-                        }
-
-
+                        } else
                         Toast.makeText(Page_Navigation_Type_M.this, " thay đổi mật khẩu thất bại  ", Toast.LENGTH_SHORT).show();
                     }
-
-
                 }
             }
         });

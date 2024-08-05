@@ -92,7 +92,7 @@ public class QuanLyDAO {
         values.put("emailQL", email);
         values.put("matkhauQL", matkhau);
         values.put("diachiQL", diachi);
-        long check = db.update("QUANLY", values,"emailQL = ?", new String[]{email});
+        long check = db.update("QUANLY", values,"maQL = ?", new String[]{ma});
         return check > 0;
     }
 
