@@ -15,6 +15,9 @@ public class HoaDon {
         this.thanhtien = thanhtien;
     }
 
+    public HoaDon() {
+    }
+
     public String getMaHD() {
         return maHD;
     }

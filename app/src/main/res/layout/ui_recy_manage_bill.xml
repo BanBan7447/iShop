@@ -27,9 +27,9 @@
             android:id="@+id/Data_Code_Bill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:text="HD0000"
-            android:textSize="18dp"
-            android:layout_alignParentEnd="true"/>
+            android:textSize="18dp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -70,9 +70,9 @@
             android:id="@+id/Data_Code_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:text="KH0000"
-            android:textSize="18dp"
-            android:layout_alignParentEnd="true"/>
+            android:textSize="18dp" />
     </RelativeLayout>
 
     <RelativeLayout

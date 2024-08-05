@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "DBISHOP", null, 5);
+        super(context, "DBISHOP", null, 10);
     }
 
     @Override
@@ -21,10 +21,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 "matkhauKH text," +
                 "diachiKH text)";
         db.execSQL(tKHACHHANG);
-        db.execSQL("INSERT INTO KHACHHANG VALUES('IC1001', 'tcme_thanh_phong', 'Nghiêu Thanh Phong','0192805205','thanhphong47@gmail.com','1234','Hồ Chí Minh')," +
-                "('IC1002','cme_tan_sang','Nguyễn Tấn Sang','0251303999','tansang99@gmail.com','1234','Tiền Giang')," +
-                "('IC1003','cme_giang_sinh','Ngô Thị Giáng Sinh','0212512202','giangsinh12@gmail.com','1234','Tây Ninh')," +
-                "('IC1004','cme_huy_hoang','Nguyễn Văn Huy Hoàng','0201234999','hoang2000@gmail.com','1234','Hồ Chí Minh')," +
+        db.execSQL("INSERT INTO KHACHHANG VALUES('IC1001', 'ce_thanh_phong', 'Nghiêu Thanh Phong','0192805205','thanhphong47@gmail.com','1234','Hồ Chí Minh')," +
+                "('IC1002','ce_tan_sang','Nguyễn Tấn Sang','0251303999','tansang99@gmail.com','1234','Tiền Giang')," +
+                "('IC1003','ce_giang_sinh','Ngô Thị Giáng Sinh','0212512202','giangsinh12@gmail.com','1234','Tây Ninh')," +
+                "('IC1004','ce_huy_hoang','Nguyễn Văn Huy Hoàng','0201234999','hoang2000@gmail.com','1234','Hồ Chí Minh')," +
                 "('IC1005','c_khanh_vy','Trần Khánh Vy','0242108999','khanhvy99@gmail.com','1234','Nghệ An')," +
                 "('IC1006','c_thach_trang','Thạch Nguyễn Phương Trang','0262002998','thachtrang98@gmail.com','1234','Hà Nội')," +
                 "('IC1007','c_giang_oi','Đào Lê Thu Giang','0322708991','giangoi91@gmail.com','1234','Hà Nội')," +
@@ -47,11 +47,11 @@ public class DBHelper extends SQLiteOpenHelper {
                 "emailNV text," +
                 "matkhauNV text)";
         db.execSQL(tNHANVIEN);
-        db.execSQL("INSERT INTO NHANVIEN VALUES('IE101','cme_thanh_phong','Nghiêu Thanh Phong','19','Nam','Hồ Chí Minh','0192805205','thanhphong47@ishop.vn','1234')," +
-                "('IE102','cme_tan_sang','Nguyễn Tấn Sang','25','Nữ','Tiền Giang','0251303999','tansang99@ishop.vn','1234')," +
-                "('IE103','cme_giang_sinh','Ngô Thị Giáng Sinh','21','Nam','Tây Ninh','0212512202','giangsinh12@ishop.vn','1234')," +
-                "('IE104','cme_huy_hoang','Nguyễn Văn Huy Hoàng','20','Nam','Hồ Chí Minh','0201234999','hoang2000@ishop.vn','1234')," +
-                "('IE105','cme_guang_liem','Ngô Thị Giáng Sinh','23','Nam','Hồ Chí Minh','0323613201','quangliem01@ishop.vn','1234')");
+        db.execSQL("INSERT INTO NHANVIEN VALUES('IE101','ce_thanh_phong','Nghiêu Thanh Phong','19','Nam','Hồ Chí Minh','0192805205','thanhphong47@ishop.vn','1234')," +
+                "('IE102','ce_tan_sang','Nguyễn Tấn Sang','25','Nữ','Tiền Giang','0251303999','tansang99@ishop.vn','1234')," +
+                "('IE103','ce_giang_sinh','Ngô Thị Giáng Sinh','21','Nam','Tây Ninh','0212512202','giangsinh12@ishop.vn','1234')," +
+                "('IE104','ce_huy_hoang','Nguyễn Văn Huy Hoàng','20','Nam','Hồ Chí Minh','0201234999','hoang2000@ishop.vn','1234')," +
+                "('IE105','ce_huy_hoang','Quang Liem','23','Nam','Hồ Chí Minh','0323613201','quangliem01@ishop.vn','1234')");
 
         //table QUẢN LÝ
         String tQUANLY = "CREATE TABLE QUANLY(maQL text primary key, " +
@@ -106,7 +106,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "maNV text references NHANVIEN(maNV)," +
                 "thanhtien integer)";
         db.execSQL(tHOADON);
-        db.execSQL("INSERT INTO HOADON VALUES('IB','IO','14/07/2024','IE101', 1400000000)");
+        db.execSQL("INSERT INTO HOADON VALUES('IB1','IO101','14/07/2024','IE101', 168478000)");
 
         //table ĐƠN HÀNG
         String tDONHANG = "CREATE TABLE DONHANG(maDH text primary key," +
@@ -120,6 +120,15 @@ public class DBHelper extends SQLiteOpenHelper {
                 "('IO102','IC1006','15/07/2024','Chưa xử lý','IE102', 0)," +
                 "('IO103','IC1007','16/07/2024','Chưa xử lý','IE101', 0)," +
                 "('IO104','IC1008','17/07/2024','Chưa xử lý','IE102', 0)");
+
+        //table GIO HANG
+        String tGIOHANG = "CREATE TABLE GIOHANG(maKH text references KHACHHANG(maKH)," +
+                "anhSP text," +
+                "tenSP text," +
+                "tenLSP text," +
+                "gia int," +
+                "soluong int)";
+        db.execSQL(tGIOHANG);
 
         //table SẢN PHẨM
         String tSANPHAM = "CREATE TABLE SANPHAM(maSP text primary key, " +
@@ -439,6 +448,7 @@ public class DBHelper extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS CTDH");
             db.execSQL("DROP TABLE IF EXISTS LOAISANPHAM");
             db.execSQL("DROP TABLE IF EXISTS QUANLY");
+            db.execSQL("DROP TABLE IF EXISTS GIOHANG");
             onCreate(db);
         }
     }

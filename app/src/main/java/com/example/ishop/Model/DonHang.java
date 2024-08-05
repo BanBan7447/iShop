@@ -17,6 +17,9 @@ public class DonHang {
         this.thanhtien = thanhtien;
     }
 
+    public DonHang() {
+    }
+
     public String getMaDH() {
         return maDH;
     }

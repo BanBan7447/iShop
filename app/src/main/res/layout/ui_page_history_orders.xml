@@ -38,13 +38,20 @@
         android:id="@+id/Search_Orders"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="16dp"
-        android:queryHint="Tìm kiếm đơn hàng"
-        android:iconifiedByDefault="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:background="@drawable/stroke_raidus_16"
-        android:queryBackground="@android:color/transparent"/>
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="Tìm kiếm tên sản phẩm" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_list_bill_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

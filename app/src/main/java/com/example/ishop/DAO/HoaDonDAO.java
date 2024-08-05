@@ -17,7 +17,7 @@ public class HoaDonDAO {
     }
 
     //lấy danh sách hóa đơn
-    public ArrayList<HoaDon> get_HD() {
+    public ArrayList<HoaDon> get_ListHD() {
         ArrayList<HoaDon> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM HOADON", null);
@@ -28,21 +28,39 @@ public class HoaDonDAO {
                         cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),
-                        cursor.getInt(4)));
+                        cursor.getLong(4)));
             } while (cursor.moveToNext());
         }
         return list;
     }
 
+    //lấy hóa đơn theo ma
+    public HoaDon get_HD(String maHD) {
+        HoaDon hd = new HoaDon();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM HOADON WHERE maHD = ? ", new String[]{maHD});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+                hd = new HoaDon(cursor.getString(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getLong(4));
+        } else {
+            hd = null;
+        }
+        return hd;
+    }
+
     //thêm hóa đơn
-    public boolean add_HD(String maHD, String maDH, String ngay, String maNV, long thanhtien){
+    public boolean add_HD(String maDH, String ngay, String maNV, long thanhtien){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maHD", maHD);
+        values.put("maHD", createIdHD());
         values.put("maDH", maDH);
         values.put("ngayHD", ngay);
         values.put("maNV", maNV);
-        values.put("thanhtienDH", thanhtien);
+        values.put("thanhtien", thanhtien);
         long check = db.insert("HOADON", null, values);
         return check > 0;
     }
@@ -56,7 +74,7 @@ public class HoaDonDAO {
         values.put("maDH", maDH);
         values.put("ngayHD", ngay);
         values.put("maNV", maNV);
-        values.put("thanhtienDH", thanhtien);
+        values.put("thanhtien", thanhtien);
         long check = db.update("HOADON", values, "maHD = ?", new String[]{maHD});
         return check > 0;
     }
@@ -66,5 +84,29 @@ public class HoaDonDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("HOADON", "maHD = ?", new String[]{ma});
         return check > 0;
+    }
+
+    //create idHD
+    public String createIdHD(){
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM HOADON", null);
+        if (cursor.getCount()>0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IB";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        if (number.isEmpty()){
+            number = "0";
+        }
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

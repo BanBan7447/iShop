@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Type_Customers.Fragment_Page_TypeC.FragPage_Notification"
-    android:background="@color/Light">
+    android:background="@color/Light"
+    android:orientation="vertical"
+    tools:context=".Type_Customers.Fragment_Page_TypeC.FragPage_Notification">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thông Báo"
         android:layout_margin="20dp"
-        android:textStyle="bold"
+        android:text="Thông Báo"
+        android:textColor="@color/Dark"
         android:textSize="24dp"
-        android:textColor="@color/Dark"/>
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
+import com.example.ishop.Model.NhanVien;
 import com.example.ishop.Model.QuanLy;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class QuanLyDAO {
     }
 
     //lấy danh sách quản lý
-    public ArrayList<QuanLy> get_QL() {
+    public ArrayList<QuanLy> get_listQL() {
         ArrayList<QuanLy> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM QUANLY", null);
@@ -31,10 +32,32 @@ public class QuanLyDAO {
                         cursor.getString(3),
                         cursor.getString(4),
                         cursor.getString(5),
-                        cursor.getString(6)));
+                        cursor.getString(6)
+                ));
             } while (cursor.moveToNext());
         }
         return list;
+    }
+
+    //lay thong tin QL theo email
+    public NhanVien get_QL(String email) {
+        NhanVien ql = new NhanVien();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM QUANLY WHERE emailQL = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            ql = new NhanVien(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        } else {
+            ql = null;
+        }
+        return ql;
     }
 
     //Kiểm tra quản lý
@@ -45,10 +68,10 @@ public class QuanLyDAO {
     }
 
     //thêm quản lý
-    public boolean add_QL(String ma, String ten, String sdt, String email, String matkhau, String diachi) {
+    public boolean add_QL(String ten, String sdt, String email, String matkhau, String diachi) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maQL", ma);
+        values.put("maQL", createIdQL());
         values.put("tenQL", ten);
         values.put("sdtQL", sdt);
         values.put("emailQL", email);
@@ -77,5 +100,26 @@ public class QuanLyDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("QUANLY", "maQL = ?", new String[]{ma});
         return check > 0;
+    }
+
+    //create idQL
+    public String createIdQL() {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM QUANLY", null);
+        if (cursor.getCount() > 0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IM9250";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

@@ -63,7 +63,7 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
 
                 if (fragment != null){
                     FragmentManager fragmentManager = getSupportFragmentManager();
-                    fragmentManager.beginTransaction().replace(R.id.Layout_Drawer, fragment).commit();
+                    fragmentManager.beginTransaction().replace(R.id.Layout_DrawerM, fragment).commit();
                     toolbar.setTitle(item.getTitle());
                 }
                 drawerLayout.closeDrawer(GravityCompat.START);
@@ -74,7 +74,7 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
 
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.Layout_Drawer, new FragPage_Manage_Orders()).commit();
+                    .replace(R.id.Layout_DrawerM, new FragPage_Manage_Orders()).commit();
             toolbar.setTitle("Quản lý đơn hàng");
             //navigationView.setCheckedItem(R.id.Fragment_Manage_Orders);
         }

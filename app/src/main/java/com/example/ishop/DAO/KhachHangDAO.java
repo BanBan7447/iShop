@@ -18,7 +18,7 @@ public class KhachHangDAO {
     }
 
     //lấy danh sách khách hàng
-    public ArrayList<KhachHang> get_KH() {
+    public ArrayList<KhachHang> get_ListKH() {
         ArrayList<KhachHang> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG", null);
@@ -37,18 +37,62 @@ public class KhachHangDAO {
         return list;
     }
 
-    //Kiểm tra khách hàng
-    public boolean check_KH(String email, String sdt, String matkhau) {
+    //lấy khách hàng theo maKH
+    public KhachHang get_KH(String ma) {
+        KhachHang kh = new KhachHang();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ? OR sdtKH = ? AND matkhauKH = ?", new String[]{email, sdt, matkhau});
-        return cursor.getCount() > 0;
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE maKH = ?", new String[]{ma});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            kh = new KhachHang(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6));
+        } else {
+            kh = null;
+        }
+        return kh;
+    }
+
+    //laythongtinkhachhang
+    public KhachHang gettTKH(String email) {
+        KhachHang kh = new KhachHang();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            kh = new KhachHang(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        } else {
+            kh = null;
+        }
+        return kh;
+    }
+
+    //Kiểm tra khách hàng
+    public boolean checkKH(String email, String matkhau) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?  AND matkhauKH = ?", new String[]{email, matkhau});
+        if (cursor.getCount() != 0) {
+            return true;
+        }
+        return false;
     }
 
     //thêm khách hàng
-    public boolean add_KH(String ma, String anh, String ten, String sdt, String email, String matkhau, String diachi) {
+    public void add_KH(String anh, String ten, String sdt, String email, String matkhau, String diachi) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maKH", ma);
+        values.put("maKH", createIdKH());
         values.put("anhKH", anh);
         values.put("tenKH", ten);
         values.put("sdtKH", sdt);
@@ -56,7 +100,7 @@ public class KhachHangDAO {
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
         long check = db.insert("KHACHHANG", null, values);
-        return check > 0;
+
     }
 
     //sửa khách hàng
@@ -69,7 +113,7 @@ public class KhachHangDAO {
         values.put("emailKH", email);
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
-        long check = db.update("KHACHHANG", values,"maKH = ?", new String[]{ma});
+        long check = db.update("KHACHHANG", values, "maKH = ?", new String[]{ma});
         return check > 0;
     }
 
@@ -78,5 +122,26 @@ public class KhachHangDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("KHACHHANG", "maKH = ?", new String[]{ma});
         return check > 0;
+    }
+
+    //create idKH
+    public String createIdKH() {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG", null);
+        if (cursor.getCount() > 0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IC1001";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

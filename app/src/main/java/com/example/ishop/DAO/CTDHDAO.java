@@ -18,17 +18,19 @@ public class CTDHDAO {
     }
 
     //lấy danh sách CTDH
-    public ArrayList<CTDH> get_CTDH() {
+    public ArrayList<CTDH> get_CTDH(String maDH) {
         ArrayList<CTDH> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM CTDH", null);
         if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
-                list.add(new CTDH(cursor.getString(0),
-                        cursor.getString(1),
-                        cursor.getInt(2),
-                        cursor.getInt(3)));
+                if (cursor.getString(0).equals(maDH)) {
+                    list.add(new CTDH(cursor.getString(0),
+                            cursor.getString(1),
+                            cursor.getInt(2),
+                            cursor.getInt(3)));
+                }
             } while (cursor.moveToNext());
         }
         return list;
@@ -63,5 +65,26 @@ public class CTDHDAO {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         long check = db.delete("CTDH", "maDH = ? AND maSP = ?", new String[]{maDH, maSP});
         return check > 0;
+    }
+
+    //create idCTDH
+    public String createIdCTDH(){
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM CTDH", null);
+        if (cursor.getCount()>0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IO101";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
     }
 }

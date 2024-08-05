@@ -32,11 +32,26 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/Icon_Back_Product_User"
                 android:paddingLeft="12dp"
-                android:text="Loại sản phẩm"
+                android:text="Iphone"
                 android:textColor="@color/Dark"
                 android:textSize="18dp"
                 android:textStyle="bold" />
         </RelativeLayout>
+
+        <SearchView
+            android:id="@+id/Search_Orders"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/stroke_raidus_16"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Tìm kiếm đơn hàng" />
 
 
         <androidx.recyclerview.widget.RecyclerView

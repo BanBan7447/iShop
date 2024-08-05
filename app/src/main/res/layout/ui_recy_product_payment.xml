@@ -8,6 +8,7 @@
     android:background="@drawable/stroke_bottom">
 
     <ImageView
+        android:id="@+id/Data_Image_ProductCart"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@mipmap/iphone_15_pro_max"
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/Data_Name_Product"
+            android:id="@+id/Data_Name_ProductCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="iPhone 15 Pro Max"
@@ -28,17 +29,17 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/Data_Name_ProductType"
+            android:id="@+id/Data_Name_ProductTypeCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="iPhone"
             android:textSize="16dp"
             android:textColor="@color/PaleWhite"
             android:textStyle="bold"
-            android:layout_below="@id/Data_Name_Product"/>
+            android:layout_below="@id/Data_Name_ProductCart"/>
 
         <TextView
-            android:id="@+id/Data_Price_Product"
+            android:id="@+id/Data_Price_ProductCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -46,18 +47,18 @@
             android:textSize="20dp"
             android:textColor="@color/Link"
             android:textStyle="bold"
-            android:layout_below="@+id/Data_Name_ProductType"/>
+            android:layout_below="@+id/Data_Name_ProductTypeCart"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="đ"
+            android:text=" đ"
             android:textSize="20dp"
             android:textColor="@color/Link"
             android:textStyle="bold"
-            android:layout_below="@+id/Data_Name_ProductType"
-            android:layout_toRightOf="@+id/Data_Price_Product"/>
+            android:layout_below="@+id/Data_Name_ProductTypeCart"
+            android:layout_toRightOf="@+id/Data_Price_ProductCart"/>
 
         <TextView
             android:id="@+id/Data_Quantity_ProductCart"

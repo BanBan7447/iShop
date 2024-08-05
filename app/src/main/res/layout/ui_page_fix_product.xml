@@ -82,15 +82,16 @@
         android:id="@+id/EdtFix_Description_Product"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_below="@+id/EdtFix_Price_Product"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="11dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
-        android:layout_below="@+id/EdtFix_Price_Product"
-        android:text="Nhập mô tả:"
+        android:background="@drawable/stroke_raidus_16"
         android:paddingLeft="14dp"
-        android:textStyle="bold"
+        android:text="Nhập mô tả:"
         android:textColor="@color/Dark"
-        android:background="@drawable/stroke_raidus_16"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/Btn_Fix_Product"

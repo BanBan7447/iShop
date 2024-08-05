@@ -19,6 +19,9 @@ public class KhachHang {
         this.diachi = diachi;
     }
 
+    public KhachHang() {
+    }
+
     public String getMa() {
         return ma;
     }

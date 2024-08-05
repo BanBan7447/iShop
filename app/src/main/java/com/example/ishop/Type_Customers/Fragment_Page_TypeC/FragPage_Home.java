@@ -28,6 +28,7 @@ import com.example.ishop.Model.LoaiSanPham;
 import com.example.ishop.Model.SanPham;
 import com.example.ishop.R;
 import com.example.ishop.Type_Customers.Page_List_Product_Type;
+import com.example.ishop.Utils.Utils;
 
 import java.util.ArrayList;
 
@@ -108,6 +109,7 @@ public class FragPage_Home extends Fragment {
             if (sp.getMaLSP().equals("IW15"))
                 list4.add(sp);
         }
+
         //iphone
         sanPhamAdapter = new SanPhamAdapter(getContext(),list1);
         rcv1.setLayoutManager(new GridLayoutManager(getContext(),2, LinearLayoutManager.HORIZONTAL, false));
@@ -124,6 +126,10 @@ public class FragPage_Home extends Fragment {
         sanPhamAdapter = new SanPhamAdapter(getContext(),list4);
         rcv4.setLayoutManager(new GridLayoutManager(getContext(), 2, LinearLayoutManager.HORIZONTAL, false));
         rcv4.setAdapter(sanPhamAdapter);
+
+        if (Utils.listGioHang == null) {
+            Utils.listGioHang = new ArrayList<>();
+        }
     }
 
 

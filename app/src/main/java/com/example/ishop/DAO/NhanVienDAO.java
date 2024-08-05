@@ -18,7 +18,7 @@ public class NhanVienDAO {
     }
 
     //lấy danh sách nhân viên
-    public ArrayList<NhanVien> get_NV() {
+    public ArrayList<NhanVien> get_ListNV() {
         ArrayList<NhanVien> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM NHANVIEN", null);
@@ -26,15 +26,56 @@ public class NhanVienDAO {
             cursor.moveToFirst();
             do {
                 list.add(new NhanVien(cursor.getString(0),
-                        cursor.getString(1),
+                    cursor.getString(1),
                         cursor.getString(2),
                         cursor.getString(3),
                         cursor.getString(4),
                         cursor.getString(5),
-                        cursor.getString(6)));
+                        cursor.getString(6)
+                      ));
             } while (cursor.moveToNext());
         }
         return list;
+    }
+
+    //lay thong tin NV theo email
+    public NhanVien get_NV(String email) {
+        NhanVien nv = new NhanVien();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM NHANVIEN WHERE emailNV = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            nv = new NhanVien(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        } else {
+            nv = null;
+        }
+        return nv;
+    }
+
+    //lay thong tin NV theo ma
+    public NhanVien get_NV2(String ma) {
+        NhanVien nv = new NhanVien();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM NHANVIEN WHERE maNV = ?", new String[]{ma});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            nv = new NhanVien(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        }
+        return nv;
     }
 
     //Kiểm tra nhân viên
@@ -45,10 +86,10 @@ public class NhanVienDAO {
     }
 
     //thêm nhân viên
-    public boolean add_NV(String ma, String anh, String ten, String sdt, String email, String matkhau, String diachi) {
+    public boolean add_NV(String anh, String ten, String sdt, String email, String matkhau, String diachi) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("maNV", ma);
+        values.put("maNV", createIdNV());
         values.put("anhNV", anh);
         values.put("tenNV", ten);
         values.put("sdtNV", sdt);
@@ -80,4 +121,24 @@ public class NhanVienDAO {
         return check > 0;
     }
 
+    //create idNV
+    public String createIdNV() {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM NHANVIEN", null);
+        if (cursor.getCount() > 0) {
+            cursor.moveToLast();
+            String s = cursor.getString(0);
+            cursor.close();
+            return upNumber(s);
+        } else {
+            return "IE101";
+        }
+    }
+
+    private String upNumber(String s) {
+        String st = s.replaceAll("[0-9]", "");
+        String number = s.replaceAll("[^0-9]", "");
+        int n = Integer.parseInt(number) + 1;
+        return st + n;
+    }
 }

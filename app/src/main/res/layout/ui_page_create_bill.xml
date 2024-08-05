@@ -16,7 +16,7 @@
         android:background="@color/Light">
 
         <ImageView
-            android:id="@+id/Icon_Back"
+            android:id="@+id/Icon_Back_CreateBill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_back"
@@ -30,7 +30,7 @@
             android:textColor="@color/Dark"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
+            android:layout_toRightOf="@+id/Icon_Back_CreateBill"
             android:paddingLeft="12dp"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
@@ -115,10 +115,11 @@
                     android:id="@+id/Data_Date_Orders"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@+id/TT_Date_Orders"
                     android:text="14/07/2024"
-                    android:textSize="24dp"
                     android:textColor="@color/Dark"
-                    android:layout_toRightOf="@+id/TT_Date_Orders"/>
+                    android:textSize="24dp" />
 
             </RelativeLayout>
 
@@ -203,7 +204,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số điện thoại"
+                android:text="Địa chỉ nhận hàng"
                 android:textStyle="bold"
                 android:textColor="@color/Dark"
                 android:textSize="18dp"
@@ -253,6 +254,12 @@
                 android:textStyle="bold"
                 android:textColor="@color/Dark"/>
 
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_create_Bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" />
 
             <View
                 android:layout_width="match_parent"
@@ -326,7 +333,7 @@
                     android:id="@+id/VND_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="đ"
+                    android:text=" đ"
                     android:textSize="16dp"
                     android:textColor="@color/Dark"
                     android:layout_alignParentEnd="true"/>
@@ -352,7 +359,7 @@
                     android:id="@+id/Data_Delivery_Price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100"
+                    android:text="0"
                     android:textSize="16dp"
                     android:textColor="@color/Dark"
                     android:layout_toLeftOf="@+id/VND_2"/>
@@ -361,7 +368,7 @@
                     android:id="@+id/VND_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="đ"
+                    android:text=" đ"
                     android:textSize="16dp"
                     android:textColor="@color/Dark"
                     android:layout_alignParentEnd="true"/>
@@ -398,7 +405,7 @@
                     android:id="@+id/VND_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="đ"
+                    android:text=" đ"
                     android:textSize="16dp"
                     android:textColor="@color/Dark"
                     android:paddingTop="10dp"
@@ -411,6 +418,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
                 android:text="Xuất hóa đơn"
                 android:textStyle="bold"
                 android:textSize="18dp"
