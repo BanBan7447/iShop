@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
 import com.example.ishop.Model.NhanVien;
+import com.example.ishop.Model.KhachHang;
 import com.example.ishop.Model.QuanLy;
 
 import java.util.ArrayList;
@@ -91,7 +92,7 @@ public class QuanLyDAO {
         values.put("emailQL", email);
         values.put("matkhauQL", matkhau);
         values.put("diachiQL", diachi);
-        long check = db.update("QUANLY", values,"maQL = ?", new String[]{ma});
+        long check = db.update("QUANLY", values,"emailQL = ?", new String[]{email});
         return check > 0;
     }
 

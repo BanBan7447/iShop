@@ -11,9 +11,9 @@
         android:id="@+id/Data_Image_Employee"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/pic_profile"
         android:scaleType="centerCrop"
-        app:shapeAppearanceOverlay="@style/Custom_Shape"/>
+        android:src="@mipmap/pic_profile"
+        app:shapeAppearanceOverlay="@style/Custom_Shape" />
 
     <TextView
         android:id="@+id/Data_Code_Employee"

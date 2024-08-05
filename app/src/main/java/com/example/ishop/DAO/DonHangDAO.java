@@ -1,5 +1,6 @@
 package com.example.ishop.DAO;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,12 +10,15 @@ import com.example.ishop.Database.DBHelper;
 import com.example.ishop.Model.DonHang;
 import com.example.ishop.Model.KhachHang;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DonHangDAO {
     private DBHelper dbHelper;
     public DonHangDAO(Context context){
         dbHelper = new DBHelper(context);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
     }
 
     //lấy danh sách đơn hàng
@@ -109,4 +113,35 @@ public class DonHangDAO {
         int n = Integer.parseInt(number) + 1;
         return st + n;
     }
+    public  int get_sDH() {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM DONHANG", null);
+        int a = cursor.getCount();
+        return a;
+    }
+
+    public  int get_sDH1(String ngay) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM DONHANG WHERE ngayDH=?", new String[]{ngay});
+        int a = cursor.getCount();
+        return a;
+    }
+
+    //tong doanh thu don hang` tron 1ngay`
+    @SuppressLint("Range")
+    public int getDoanhthu(String ngay){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sqlDoangThu1 = "SELECT  SUM(thanhtien) as doanhthu1 FROM DONHANG WHERE ngayDH = ?";
+        List<Integer> list = new ArrayList<Integer>();
+        Cursor c = db.rawQuery(sqlDoangThu1, new String[]{ngay});
+        while(c.moveToNext()){
+            try{
+                list.add(Integer.parseInt(c.getString(c.getColumnIndex("doanhthu1"))));
+            }catch (Exception e){
+                list.add(0);
+            }
+        }
+        return list.get(0);
+    }
+
 }

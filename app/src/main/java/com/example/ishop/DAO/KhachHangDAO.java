@@ -31,7 +31,8 @@ public class KhachHangDAO {
                         cursor.getString(3),
                         cursor.getString(4),
                         cursor.getString(5),
-                        cursor.getString(6)));
+                        cursor.getString(6)
+                        ));
             } while (cursor.moveToNext());
         }
         return list;
@@ -82,10 +83,10 @@ public class KhachHangDAO {
     public boolean checkKH(String email, String matkhau) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM KHACHHANG WHERE emailKH = ?  AND matkhauKH = ?", new String[]{email, matkhau});
-        if (cursor.getCount() != 0) {
-            return true;
-        }
-        return false;
+       if(cursor.getCount() !=0){
+           return true;
+       }
+       return false;
     }
 
     //thêm khách hàng
@@ -113,10 +114,19 @@ public class KhachHangDAO {
         values.put("emailKH", email);
         values.put("matkhauKH", matkhau);
         values.put("diachiKH", diachi);
-        long check = db.update("KHACHHANG", values, "maKH = ?", new String[]{ma});
+        long check = db.update("KHACHHANG", values,"emailKH = ?", new String[]{email});
         return check > 0;
     }
 
+    public int updatePass(String email, String matkhau){
+        ContentValues values = new ContentValues();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        values.put("hoten",email);
+        values.put("hoten",matkhau);
+        return  db.update("KHACHHANG", values,"emailKH = ?", new String[]{email});
+
+
+    }
     //xóa khách hàng
     public boolean delete_KH(String ma) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -137,7 +147,6 @@ public class KhachHangDAO {
             return "IC1001";
         }
     }
-
     private String upNumber(String s) {
         String st = s.replaceAll("[0-9]", "");
         String number = s.replaceAll("[^0-9]", "");
