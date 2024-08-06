@@ -26,11 +26,11 @@
             android:id="@+id/Title_Page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
             android:text="Thống kê mua hàng"
             android:textColor="@color/Dark"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
             android:paddingLeft="12dp"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
