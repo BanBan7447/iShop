@@ -123,4 +123,24 @@ public class QuanLyDAO {
         int n = Integer.parseInt(number) + 1;
         return st + n;
     }
+    //laythongtinquanly
+    public QuanLy gettTQL(String email) {
+        QuanLy ql = new QuanLy();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM QUANLY WHERE emailQL = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            ql = new QuanLy(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        } else {
+            ql = null;
+        }
+        return ql;
+    }
 }

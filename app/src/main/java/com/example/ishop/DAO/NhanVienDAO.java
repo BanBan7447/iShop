@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
+import com.example.ishop.Model.KhachHang;
 import com.example.ishop.Model.NhanVien;
 
 import java.util.ArrayList;
@@ -140,5 +141,24 @@ public class NhanVienDAO {
         String number = s.replaceAll("[^0-9]", "");
         int n = Integer.parseInt(number) + 1;
         return st + n;
+    }
+    public NhanVien gettTNV(String email) {
+        NhanVien nv = new NhanVien();
+        SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM NHANVIEN WHERE emailNV = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
+            nv = new NhanVien(cursor.getString(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)
+            );
+        } else {
+            nv = null;
+        }
+        return nv;
     }
 }

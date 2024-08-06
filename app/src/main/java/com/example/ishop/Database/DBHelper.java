@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
 
     public DBHelper(Context context) {
-        super(context, "DBISHOP", null, 11);
+        super(context, "DBISHOP", null, 12);
     }
 
     @Override
@@ -40,31 +40,32 @@ public class DBHelper extends SQLiteOpenHelper {
         String tNHANVIEN = "CREATE TABLE NHANVIEN(maNV text primary key, " +
                 "anhNV text," +
                 "tenNV text," +
-                "tuoiNV text," +
-                "gioitinhNV text," +
-                "diachiNV text," +
                 "SDTNV text," +
                 "emailNV text," +
-                "matkhauNV text)";
+                "matkhauNV text,"+
+                "diachiNV text," +
+                "tuoiNV text," +
+                "gioitinhNV text)";
         db.execSQL(tNHANVIEN);
-        db.execSQL("INSERT INTO NHANVIEN VALUES('IE101','ce_thanh_phong','Nghiêu Thanh Phong','19','Nam','Hồ Chí Minh','0192805205','thanhphong47@ishop.vn','1234')," +
-                "('IE102','ce_tan_sang','Nguyễn Tấn Sang','25','Nữ','Tiền Giang','0251303999','tansang99@ishop.vn','1234')," +
-                "('IE103','ce_giang_sinh','Ngô Thị Giáng Sinh','21','Nam','Tây Ninh','0212512202','giangsinh12@ishop.vn','1234')," +
-                "('IE104','ce_huy_hoang','Nguyễn Văn Huy Hoàng','20','Nam','Hồ Chí Minh','0201234999','hoang2000@ishop.vn','1234')," +
-                "('IE105','ce_huy_hoang','Quang Liem','23','Nam','Hồ Chí Minh','0323613201','quangliem01@ishop.vn','1234')");
+        db.execSQL("INSERT INTO NHANVIEN VALUES('IE101','ce_thanh_phong','Nghiêu Thanh Phong','0192805205','thanhphong47@ishop.vn','1234','Hồ Chí Minh','19','Nam')," +
+                "('IE102','ce_tan_sang','Nguyễn Tấn Sang','0251303999','tansang99@ishop.vn','1234','Tiền Giang','25','Nữ')," +
+                "('IE103','ce_giang_sinh','Ngô Thị Giáng Sinh','0212512202','giangsinh12@ishop.vn','1234','Tây Ninh','21','Nam')," +
+                "('IE104','ce_huy_hoang','Nguyễn Văn Huy Hoàng','0201234999','hoang2000@ishop.vn','1234','Hồ Chí Minh','20','Nam')," +
+                "('IE105','ce_huy_hoang','Quang Liem','0323613201','quangliem01@ishop.vn','1234','Hồ Chí Minh','23','Nam')");
 
         //table QUẢN LÝ
         String tQUANLY = "CREATE TABLE QUANLY(maQL text primary key, " +
                 "anhQL text," +
                 "tenQL text," +
-                "tuoiQL text," +
-                "gioitinhQL text," +
-                "diachiQL text," +
                 "SDTQL text," +
                 "emailQL text," +
-                "matkhauQL text)";
+                "matkhauQL text,"+
+                "diachiQL text," +
+                "tuoiQL text," +
+                "gioitinhQL text)" ;
+
         db.execSQL(tQUANLY);
-        db.execSQL("INSERT INTO QUANLY VALUES('IM9250','cme_quan_ly','Nghiêu Tấn Hoàng','24','Nam','Hồ Chí Minh','0212519292','tanhoang925@ishop.vn','1234')");
+        db.execSQL("INSERT INTO QUANLY VALUES('IM9250','cme_quan_ly','Nghiêu Tấn Hoàng','0212519292','tanhoang925@ishop.vn','1234','Hồ Chí Minh','24','Nam')");
 
         //table LOẠI SẢN PHẨM
         String tLOAISANPHAM = "CREATE TABLE LOAISANPHAM(maLSP text primary key," +
