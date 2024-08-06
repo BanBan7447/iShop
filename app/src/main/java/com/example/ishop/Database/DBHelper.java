@@ -106,7 +106,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 "maNV text references NHANVIEN(maNV)," +
                 "thanhtien integer)";
         db.execSQL(tHOADON);
-        db.execSQL("INSERT INTO HOADON VALUES('IB1','IO101','14/07/2024','IE101', 168478000)");
+        db.execSQL("INSERT INTO HOADON VALUES('IB1','IO101','14/07/2024','IE101', 168478000)," +
+                "('IB2','IO102','14/07/2024','IE102', 168478000)," +
+                "('IB3','IO103','14/07/2024','IE103', 168478000)," +
+                "('IB4','IO104','14/07/2024','IE104', 168478000)");
 
         //table ĐƠN HÀNG
         String tDONHANG = "CREATE TABLE DONHANG(maDH text primary key," +
