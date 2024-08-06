@@ -79,6 +79,8 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
                     fragment = new FragPage_Statistical();
                 } else if (item.getItemId() == R.id.Dialog_Change_Password) {
                         DialogChangePass();
+                }else if(item.getItemId() == R.id.Exit){
+                    startActivity(new Intent(Page_Navigation_Type_M.this,Page_Sign_In.class));
                 }
 
                 if (fragment != null){
@@ -122,13 +124,20 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
         QuanLyDAO quanLyDAO = new QuanLyDAO(this);
         SharedPreferences pref = getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
         String email = pref.getString("Email","");
-        NhanVien ql = quanLyDAO.get_QL(email);
+        QuanLy ql = quanLyDAO.gettTQL(email);
+
         String olPass = ql.getMatkhau();
 
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
         alertDialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.fill_radius_16));
+        Btn_Cancel_ChangePass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
         Btn_ChangePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,8 +163,9 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
                             Toast.makeText(Page_Navigation_Type_M.this, " thay đổi mật khẩu thành công  ", Toast.LENGTH_SHORT).show();
                             outAPP();
                             // startActivity(new Intent(getContext().this,Page_Sign_In.class));
-                        } else
+                        } else{
                         Toast.makeText(Page_Navigation_Type_M.this, " thay đổi mật khẩu thất bại  ", Toast.LENGTH_SHORT).show();
+                    }
                     }
                 }
             }

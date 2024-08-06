@@ -20,19 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Code"
+        android:text="Admin"
         android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="@color/Light"/>
 
-    <TextView
-        android:id="@+id/Data_Name_Employee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Name"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:textColor="@color/Light"/>
 
 </LinearLayout>
