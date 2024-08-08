@@ -62,7 +62,6 @@ public class Page_Navigation_Type_C extends AppCompatActivity {
                 return true;
             }
         });
-
     }
 
     @Override

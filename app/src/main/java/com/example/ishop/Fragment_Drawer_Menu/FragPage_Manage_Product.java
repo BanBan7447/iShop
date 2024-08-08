@@ -48,7 +48,7 @@ public class FragPage_Manage_Product extends Fragment {
     }
 
     private void loadData() {
-        LoaiSanPhamDAO loaiSanPhamDAO = new LoaiSanPhamDAO(getContext());
+        loaiSanPhamDAO = new LoaiSanPhamDAO(getContext());
         listlsp = loaiSanPhamDAO.get_LSP();
         loaiSanPhamAdapter = new LoaiSanPhamAdapter(getContext(), listlsp);
         rcv.setLayoutManager(new GridLayoutManager(getContext(), 2));
@@ -83,13 +83,18 @@ public class FragPage_Manage_Product extends Fragment {
             public void onClick(View v) {
                 String malsp = EdtAdd_Code_ProductType.getText().toString();
                 String tenlsp = EdtAdd_Name_ProductType.getText().toString();
-                if (!loaiSanPhamDAO.checkLSP(malsp)){
-                    loaiSanPhamDAO.update_LSP(malsp, "", tenlsp);
-                    alertDialog.dismiss();
-                    loadData();
-                } else {
-                    Toast.makeText(getContext(), "Mã này đã tồn tại", Toast.LENGTH_SHORT).show();
+                if (!malsp.isEmpty() && !tenlsp.isEmpty()){
+                    if (!loaiSanPhamDAO.checkLSP(malsp)){
+                        loaiSanPhamDAO.add_LSP(malsp, "", tenlsp);
+                        alertDialog.dismiss();
+                        loadData();
+                    } else {
+                        Toast.makeText(getContext(), "Mã này đã tồn tại", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Toast.makeText(getContext(), "Vui lòng nhập đầy đủ", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }
