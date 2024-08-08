@@ -59,7 +59,7 @@ public class LoaiSanPhamDAO {
     //check maLSP
     public boolean checkLSP(String maLSP) {
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM MALOAISANPHAM WHERE maLSP = ?", new String[]{maLSP});
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM LOAISANPHAM WHERE maLSP = ?", new String[]{maLSP});
         if (cursor.getCount() > 0) {
             return true;
         }

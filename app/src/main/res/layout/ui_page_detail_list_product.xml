@@ -51,7 +51,7 @@
             android:background="@drawable/stroke_raidus_16"
             android:iconifiedByDefault="false"
             android:queryBackground="@android:color/transparent"
-            android:queryHint="Tìm kiếm đơn hàng" />
+            android:queryHint="Tìm kiếm sản phẩm" />
 
 
         <androidx.recyclerview.widget.RecyclerView

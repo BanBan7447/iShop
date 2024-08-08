@@ -41,6 +41,6 @@ public class Page_Intro extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 1500);
+        }, 1400);
     }
 }
