@@ -22,7 +22,7 @@ public class Page_Add_Product extends AppCompatActivity {
     private TextView EdtAdd_Code_Product, EdtAdd_Name_Product, EdtAdd_Price_Product, EdtAdd_Description_Product;
     private Button Btn_Add_Product;
     private SanPhamDAO sanPhamDAO;
-    private String maLSP = "IP27"; //gan tam maLSP IP27
+    private String maLSP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,9 @@ public class Page_Add_Product extends AppCompatActivity {
         EdtAdd_Price_Product = findViewById(R.id.EdtAdd_Price_Product);
         EdtAdd_Description_Product = findViewById(R.id.EdtAdd_Description_Product);
         Btn_Add_Product = findViewById(R.id.Btn_Add_Product);
+
+        Bundle b = getIntent().getExtras();
+        maLSP = b.getString("maLSP", "");
 
         addProduct();
         
