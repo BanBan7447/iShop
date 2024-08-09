@@ -3,8 +3,10 @@ package com.example.ishop.Type_Customers;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,10 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.ishop.DAO.GioHangDAO;
 import com.example.ishop.DAO.KhachHangDAO;
+import com.example.ishop.DAO.NhanVienDAO;
+import com.example.ishop.DAO.QuanLyDAO;
+import com.example.ishop.Model.NhanVien;
+import com.example.ishop.Model.QuanLy;
 import com.example.ishop.Model.SanPham;
 import com.example.ishop.R;
 import com.example.ishop.Type_Customers.Fragment_Page_TypeC.FragPage_Cart;
@@ -25,7 +31,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class Page_Navigation_Type_C extends AppCompatActivity {
-
+    TextView Data_Code_Manager ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +43,14 @@ public class Page_Navigation_Type_C extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.Layout_Bottom, new FragPage_Home()).commit();
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.ui_header_drawer_type_m,null);
+        Data_Code_Manager = view.findViewById(R.id.Data_Code_Manager);
+        SharedPreferences pref = getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
+        String email = pref.getString("Email","");
+        QuanLyDAO ql = new QuanLyDAO(this);
+        QuanLy quanLy = ql.gettTQL(email);
+        Data_Code_Manager.setText(quanLy.getTen());
 
         //bottomNavigationView.setSelectedItemId(R.id.Fragment_Home);
 
