@@ -24,6 +24,10 @@
         android:id="@+id/Fragment_Statistical"
         android:title="Thống kê"
         android:icon="@drawable/icon_statistical"/>"
+    <item
+        android:id="@+id/proFile"
+        android:title="Trang cá nhân"
+        android:icon="@drawable/icon_user"/>
 
     <item
         android:id="@+id/Dialog_Change_Password"

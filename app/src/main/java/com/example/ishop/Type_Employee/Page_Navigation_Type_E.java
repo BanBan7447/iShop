@@ -27,6 +27,7 @@ import com.example.ishop.DAO.QuanLyDAO;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Bill;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Customers;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Orders;
+import com.example.ishop.Fragment_Drawer_Menu.FragPage_Profile_e;
 import com.example.ishop.Model.NhanVien;
 import com.example.ishop.Model.QuanLy;
 import com.example.ishop.Page_Sign_In;
@@ -82,6 +83,8 @@ public class Page_Navigation_Type_E extends AppCompatActivity {
                     DialogChangePass1();
                 }else if (item.getItemId() == R.id.Exit) {
                     startActivity(new Intent(Page_Navigation_Type_E.this,Page_Sign_In.class));
+                }else if (item.getItemId() == R.id.proFile) {
+                    fragment = new FragPage_Profile_e();
                 }
 
                 if (fragment != null){

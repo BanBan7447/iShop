@@ -14,6 +14,10 @@
         android:id="@+id/Fragment_Manage_Customers"
         android:title="Quản lý khách hàng"
         android:icon="@drawable/icon_group"/>
+    <item
+        android:id="@+id/proFile"
+        android:title="Trang cá nhân"
+        android:icon="@drawable/icon_user"/>
 
     <item
         android:id="@+id/Dialog_Change_Password"

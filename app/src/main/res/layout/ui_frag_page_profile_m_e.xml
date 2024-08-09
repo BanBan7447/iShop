@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Type_Customers.Fragment_Page_TypeC.FragPage_Profile"
+    android:background="@color/Light"
+    android:orientation="vertical">
+
+
+
+        <ImageButton
+            android:id="@+id/Btn_MovePage_Fix_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_blue_fix"
+            android:background="@color/Light"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+         />
+
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/Data_Image_m_e"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:src="@mipmap/pic_profile"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/Custom_Shape"
+        android:padding="5dp"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/Dark"/>
+
+    <TextView
+        android:id="@+id/Data_Name_m_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/Dark"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/Icon_Phone_Call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_phone_call"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số điện thoại:"
+            android:textColor="@color/Dark"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_toRightOf="@+id/Icon_Phone_Call"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/Data_SDT_m_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SDT"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/Icon_Email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_email"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/Dark"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/Icon_Email"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/Data_Email_m_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/Icon_Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_location"/>
+
+        <TextView
+            android:id="@+id/Title_Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ: "
+            android:textColor="@color/Dark"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/Icon_Location"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/Data_Location_m_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location Customer"
+            android:textSize="18dp"
+            android:textColor="@color/Dark"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/Icon_Location"
+            android:layout_below="@+id/Title_Location"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
