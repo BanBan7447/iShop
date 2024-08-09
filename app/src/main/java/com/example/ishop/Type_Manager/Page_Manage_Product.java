@@ -56,7 +56,11 @@ public class Page_Manage_Product extends AppCompatActivity {
         FloatBtn_Add_Product.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Page_Manage_Product.this, Page_Add_Product.class));
+                Intent i = new Intent(Page_Manage_Product.this, Page_Add_Product.class);
+                Bundle b = new Bundle();
+                b.putString("maLSP", maLSP);
+                i.putExtras(b);
+                startActivity(i);
             }
         });
 

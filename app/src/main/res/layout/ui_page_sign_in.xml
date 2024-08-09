@@ -65,6 +65,7 @@
         android:textStyle="bold"
         android:textSize="16sp"
         android:background="@drawable/stroke_raidus_16"/>
+
     <CheckBox
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,8 +73,8 @@
         android:layout_marginTop="-20dp"
         android:text="Lưu mât khẩu"
         android:id="@+id/checkRememberPass"
-        android:layout_marginBottom="20dp"
-        />
+        android:layout_marginBottom="20dp" />
+
     <Button
         android:id="@+id/Btn_SignIn_SI"
         android:layout_width="match_parent"

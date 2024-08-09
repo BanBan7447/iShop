@@ -59,7 +59,7 @@ public class SanPhamAdapter extends RecyclerView.Adapter<SanPhamAdapter.ViewHold
                 b.putString("masp", list.get(position).getMaSP());
                 b.putString("anh", list.get(position).getAnh());
                 b.putString("ten", list.get(position).getTen());
-                b.putInt("gia", list.get(position).getSoluong());
+                b.putInt("gia", list.get(position).getGia());
                 b.putString("mota", list.get(position).getMota());
                 b.putString("malsp", list.get(position).getMaLSP());
                 i.putExtras(b);

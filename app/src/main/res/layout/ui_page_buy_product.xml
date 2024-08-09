@@ -126,19 +126,19 @@ hiệu năng vượt trội. Hệ thống camera ba
 chụp ảnh, quay video xuất sắc. Đây là sự kết hợp
 hoàn hảo giữa công nghệ và nghệ thuật."
                 android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/Btn_AddToCart"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/fill_radius_16"
+                android:text="Thêm vào giỏ hàng"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/Link"/>
         </LinearLayout>
-        <Button
-            android:id="@+id/Btn_AddToCart"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/fill_radius_16"
-            android:text="Thêm vào giỏ hàng"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            app:backgroundTint="@color/Link" />
-    </RelativeLayout>
+        </RelativeLayout>
 </ScrollView>
