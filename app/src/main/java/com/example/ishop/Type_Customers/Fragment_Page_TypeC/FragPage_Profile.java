@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,8 @@ import java.util.ArrayList;
 
 public class FragPage_Profile extends Fragment {
     private ImageButton Btn_MovePage_Fix_Profile;
-    private ImageView Data_Image_Customer, Page_Show_History_Orders;
+    private ImageView Data_Image_Customer;
+    private RelativeLayout Page_Show_History_Orders;
     private ArrayList<KhachHang> list;
     private TextView Data_Name_Customer, Data_SDT_Customer, Data_Email_Customer, Data_Location_Customer, Data_Quantity_Cart;
     private KhachHang kh;
