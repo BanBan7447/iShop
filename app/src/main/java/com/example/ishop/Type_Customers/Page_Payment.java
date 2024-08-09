@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -134,6 +135,7 @@ public class Page_Payment extends AppCompatActivity {
                     ctdhdao.add_CTDH(maDH, sp.getMaSP(), sp.getSoluong(),sp.getGia());
                 }
                 Utils.listGioHang.clear();
+                Toast.makeText(Page_Payment.this, "Đặt hàng thành công", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

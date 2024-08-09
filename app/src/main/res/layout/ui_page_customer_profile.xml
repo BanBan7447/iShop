@@ -202,6 +202,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/Btn_Page_History_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -225,7 +226,6 @@
             android:layout_marginLeft="8dp"/>
 
         <ImageView
-            android:id="@+id/Btn_Page_History_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_show_more"
