@@ -100,8 +100,9 @@
             android:name=".Type_Employee.Page_Navigation_Type_E"
             android:exported="false" />
         <activity
-            android:name=".Page_Intro"
-            android:exported="false" />
+            android:name=".Page_Sign_In"
+            android:exported="true"
+             />
         <activity
             android:name=".Page_Sign_Up"
             android:exported="false" />
@@ -115,8 +116,9 @@
             android:name=".Type_Manager.Page_Navigation_Type_M"
             android:exported="false" />
         <activity
-            android:name=".Page_Sign_In"
-            android:exported="true">
+            android:name=".Page_Intro"
+            android:exported="true"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
