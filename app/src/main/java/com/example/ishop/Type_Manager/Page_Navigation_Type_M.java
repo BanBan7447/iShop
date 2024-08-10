@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,14 +29,12 @@ import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Bill;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Customers;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Orders;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Product;
+import com.example.ishop.Fragment_Drawer_Menu.FragPage_Profile_m;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Statistical;
-import com.example.ishop.Model.NhanVien;
 import com.example.ishop.Model.QuanLy;
 import com.example.ishop.Page_Sign_In;
 import com.example.ishop.R;
 import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
 
 public class Page_Navigation_Type_M extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -43,7 +42,7 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
     EditText EdtChange_OldPass,EdtChange_NewPass,EdtChange_SubmitPass;
     Button Btn_ChangePass,Btn_Cancel_ChangePass;
     private int pQL;
-
+    TextView Data_Code_Manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +52,7 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
 
-
         drawerLayout = findViewById(R.id.Drawer_Layout);
-
         Toolbar toolbar = findViewById(R.id.Drawer_Toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
@@ -66,6 +63,7 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 Fragment fragment = null;
                 if (item.getItemId() == R.id.Fragment_Manage_Orders){
                     fragment = new FragPage_Manage_Orders();
@@ -81,6 +79,8 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
                         DialogChangePass();
                 }else if(item.getItemId() == R.id.Exit){
                     startActivity(new Intent(Page_Navigation_Type_M.this,Page_Sign_In.class));
+                }else if(item.getItemId() == R.id.proFile){
+                    fragment = new FragPage_Profile_m();
                 }
 
                 if (fragment != null){
@@ -94,12 +94,14 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
             }
         });
 
+
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.Layout_DrawerM, new FragPage_Manage_Orders()).commit();
             toolbar.setTitle("Quản lý đơn hàng");
             //navigationView.setCheckedItem(R.id.Fragment_Manage_Orders);
         }
+
     }
 
     @Override
@@ -174,6 +176,17 @@ public class Page_Navigation_Type_M extends AppCompatActivity {
     }
     public void outAPP(){
         startActivity(new Intent(Page_Navigation_Type_M.this, Page_Sign_In.class));
+    }
+    public View ttQL(){
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.ui_header_drawer_type_m, null);
+        Data_Code_Manager = view.findViewById(R.id.Data_Code_Manager);
+        QuanLyDAO quanLyDAO = new QuanLyDAO(this);
+        SharedPreferences pref = getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
+        String email = pref.getString("Email","");
+        QuanLy ql = quanLyDAO.gettTQL(email);
+        Data_Code_Manager.setText("hihiihihi");
+        return view;
     }
 
 }

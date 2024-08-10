@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,7 @@ import com.example.ishop.DAO.QuanLyDAO;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Bill;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Customers;
 import com.example.ishop.Fragment_Drawer_Menu.FragPage_Manage_Orders;
+import com.example.ishop.Fragment_Drawer_Menu.FragPage_Profile_e;
 import com.example.ishop.Model.NhanVien;
 import com.example.ishop.Model.QuanLy;
 import com.example.ishop.Page_Sign_In;
@@ -33,11 +35,14 @@ import com.example.ishop.R;
 import com.example.ishop.Type_Manager.Page_Navigation_Type_M;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
 public class Page_Navigation_Type_E extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     EditText EdtChange_OldPass,EdtChange_NewPass,EdtChange_SubmitPass;
     Button Btn_ChangePass,Btn_Cancel_ChangePass;
+    TextView Data_Code_Employee;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,15 @@ public class Page_Navigation_Type_E extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
         drawerLayout = findViewById(R.id.Drawer_Layout);
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.ui_header_drawer_type_e,null);
+        Data_Code_Employee = view.findViewById(R.id.Data_Code_Employee);
+        SharedPreferences pref = getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
+        String email = pref.getString("Email","");
+        NhanVienDAO nv = new NhanVienDAO(this);
+        NhanVien nhanVien = nv.gettTNV(email);
+        Data_Code_Employee.setText(nhanVien.getTen());
+
 
         Toolbar toolbar = findViewById(R.id.Drawer_Toolbar);
         setSupportActionBar(toolbar);
@@ -69,6 +83,8 @@ public class Page_Navigation_Type_E extends AppCompatActivity {
                     DialogChangePass1();
                 }else if (item.getItemId() == R.id.Exit) {
                     startActivity(new Intent(Page_Navigation_Type_E.this,Page_Sign_In.class));
+                }else if (item.getItemId() == R.id.proFile) {
+                    fragment = new FragPage_Profile_e();
                 }
 
                 if (fragment != null){

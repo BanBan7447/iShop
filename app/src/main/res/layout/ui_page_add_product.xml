@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -92,6 +92,22 @@
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hình ảnh sản phẩm"
+        android:textColor="@color/Dark"
+        android:textSize="18dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/ivHinhSP"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_image_search_24"/>
 
     <Button
         android:id="@+id/Btn_Add_Product"
@@ -100,6 +116,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
         android:text="Xác nhận"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -107,4 +124,4 @@
         app:backgroundTint="@color/Link"
         android:layout_alignParentBottom="true"/>
 
-</RelativeLayout>
+</LinearLayout>

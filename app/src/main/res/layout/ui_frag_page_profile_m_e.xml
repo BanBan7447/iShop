@@ -9,17 +9,23 @@
     android:background="@color/Light"
     android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/Btn_MovePage_Fix_Profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/btn_blue_fix"
-        android:background="@color/Light"
-        android:layout_gravity="end"
-        android:layout_margin="20dp"/>
+
+
+        <ImageButton
+            android:id="@+id/Btn_MovePage_Fix_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_blue_fix"
+            android:background="@color/Light"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+         />
+
+
+
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/Data_Image_Customer"
+        android:id="@+id/Data_Image_m_e"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
@@ -32,7 +38,7 @@
         app:strokeColor="@color/Dark"/>
 
     <TextView
-        android:id="@+id/Data_Name_Customer"
+        android:id="@+id/Data_Name_m_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -66,7 +72,7 @@
             android:layout_marginLeft="8dp"/>
 
         <TextView
-            android:id="@+id/Data_SDT_Customer"
+            android:id="@+id/Data_SDT_m_e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SDT"
@@ -101,7 +107,7 @@
             android:layout_marginLeft="8dp"/>
 
         <TextView
-            android:id="@+id/Data_Email_Customer"
+            android:id="@+id/Data_Email_m_e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
@@ -137,7 +143,7 @@
             android:layout_marginLeft="8dp"/>
 
         <TextView
-            android:id="@+id/Data_Location_Customer"
+            android:id="@+id/Data_Location_m_e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location Customer"
@@ -150,85 +156,4 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
-
-        <ImageView
-            android:id="@+id/Icon_Cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_cart"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Số đơn hàng đã đặt:"
-            android:textColor="@color/Dark"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Cart"
-            android:layout_marginLeft="8dp"/>
-
-        <TextView
-            android:id="@+id/Data_Quantity_Cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Num"
-            android:textSize="18dp"
-            android:textColor="@color/Dark"
-            android:layout_alignParentEnd="true"/>
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:id="@+id/Page_Show_History_Orders"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp">
-
-        <ImageView
-            android:id="@+id/Icon_History"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_history"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Số đơn hàng đã đặt:"
-            android:textColor="@color/Dark"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_History"
-            android:layout_marginLeft="8dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_show_more"
-            android:rotation="180"
-            android:layout_alignParentEnd="true"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
-        <TextView
-            android:id="@+id/tv_Change_Pass"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Đổi mật khẩu"
-            android:textColor="@color/Dark"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="8dp"/>
-    </RelativeLayout>
 </LinearLayout>

@@ -12,7 +12,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/pic_profile"
+        android:src="@mipmap/ic_launcher"
         app:shapeAppearanceOverlay="@style/Custom_Shape" />
 
     <TextView
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Admin"
+        android:text="Hi! Welcome"
         android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="@color/Light"/>

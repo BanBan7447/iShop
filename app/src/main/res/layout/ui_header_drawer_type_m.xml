@@ -11,7 +11,7 @@
         android:id="@+id/Data_Image_Manager"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@mipmap/pic_profile"
+        android:src="@mipmap/ic_launcher"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/Custom_Shape"/>
 
@@ -20,19 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Code"
+        android:text="Hi! Welcome"
         android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="@color/Light"/>
 
-    <TextView
-        android:id="@+id/Data_Name_Manager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Name"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:textColor="@color/Light"/>
+
 
 </LinearLayout>

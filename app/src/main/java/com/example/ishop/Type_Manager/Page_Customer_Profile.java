@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -22,7 +23,8 @@ import com.example.ishop.R;
 import java.util.ArrayList;
 
 public class Page_Customer_Profile extends AppCompatActivity {
-    private ImageView Icon_Back, Data_Image_Customer, Btn_Page_History_Orders;
+    private ImageView Icon_Back, Data_Image_Customer;
+    private RelativeLayout Btn_Page_History_Orders;
     private KhachHang khachHang;
     private ArrayList<KhachHang> list;
     private TextView Data_Name_Customer,Data_SDT_Customer,Data_Email_Customer,Data_Location_Customer,Data_Quantity_Cart;

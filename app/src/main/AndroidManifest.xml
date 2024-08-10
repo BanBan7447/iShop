@@ -101,7 +101,8 @@
             android:exported="false" />
         <activity
             android:name=".Page_Sign_In"
-            android:exported="false" />
+            android:exported="true"
+             />
         <activity
             android:name=".Page_Sign_Up"
             android:exported="false" />
@@ -116,7 +117,8 @@
             android:exported="false" />
         <activity
             android:name=".Page_Intro"
-            android:exported="true">
+            android:exported="true"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
