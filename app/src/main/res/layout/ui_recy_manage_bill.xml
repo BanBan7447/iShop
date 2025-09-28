@@ -19,17 +19,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã hóa đơn:"
+            android:text="@string/m_h_a_n"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/Data_Code_Bill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:text="HD0000"
-            android:textSize="18dp" />
+            android:text="@string/hd0000_12"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -40,16 +40,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã đơn hàng:"
+            android:text="@string/m_n_h_ng4"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/Data_Code_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DH0000"
-            android:textSize="18dp"
+            android:text="@string/dh00004"
+            android:textSize="18sp"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
@@ -62,17 +62,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã khách hàng:"
+            android:text="@string/m_kh_ch_h_ng1"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/Data_Code_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:text="KH0000"
-            android:textSize="18dp" />
+            android:text="@string/kh000000"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -84,16 +84,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thời gian xử lý:"
+            android:text="@string/th_i_gian_x_l4"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/Data_Date_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="14/07/2024"
-            android:textSize="18dp"
+            android:text="@string/_14_07_20244"
+            android:textSize="18sp"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
@@ -102,8 +102,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Xem chi tiết"
-        android:textSize="18dp"
+        android:text="@string/xem_chi_ti_t"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/Light"
         android:background="@drawable/fill_radius_16"

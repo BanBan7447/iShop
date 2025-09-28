@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/Fragment_Home"
-        android:title="Home"
+        android:title="@string/home"
         android:icon="@drawable/icon_home"/>
 
     <item
         android:id="@+id/Fragment_Cart"
-        android:title="Cart"
+        android:title="@string/cart"
         android:icon="@drawable/icon_cart"/>
 
     <item
         android:id="@+id/Fragment_Notification"
-        android:title="Notification"
+        android:title="@string/notification"
         android:icon="@drawable/icon_notification"/>
 
     <item
         android:id="@+id/Fragment_Profile"
-        android:title="Profile"
+        android:title="@string/profile"
         android:icon="@drawable/icon_profile"/>
 </menu>

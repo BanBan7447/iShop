@@ -35,8 +35,8 @@
         android:id="@+id/Data_Name_Customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="22dp"
+        android:text="@string/name"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:layout_gravity="center"/>
@@ -58,18 +58,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số điện thoại:"
+            android:text="@string/sodienthoai"
             android:textColor="@color/Dark"
             android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_toRightOf="@+id/Icon_Phone_Call"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/Icon_Phone_Call"
             android:layout_marginLeft="8dp"/>
 
         <TextView
             android:id="@+id/Data_SDT_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SDT"
+            android:text="@string/sdt"
             android:textSize="18dp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
@@ -93,19 +93,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
+            android:text="@string/email"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Email"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Email"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Email_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="18dp"
+            android:text="@string/email2"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
 
@@ -129,23 +129,23 @@
             android:id="@+id/Title_Location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Địa chỉ: "
+            android:text="@string/diachi1"
             android:textColor="@color/Dark"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Location"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Location"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Location_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Location Customer"
-            android:textSize="18dp"
+            android:text="@string/location_customer"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/Icon_Location"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/Icon_Location"
             android:layout_below="@+id/Title_Location"/>
     </RelativeLayout>
 
@@ -166,19 +166,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số đơn hàng đã đặt:"
+            android:text="@string/sốdơnđặthàng"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Cart"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Cart"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Quantity_Cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Num"
-            android:textSize="18dp"
+            android:text="@string/num"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
@@ -188,8 +188,8 @@
         android:id="@+id/Page_Show_History_Orders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp">
 
         <ImageView
@@ -201,12 +201,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số đơn hàng đã đặt:"
+            android:text="@string/s_n_h_ng_t"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_History"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_History"
+            android:layout_marginStart="8sp"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -225,10 +225,10 @@
             android:id="@+id/tv_Change_Pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đổi mật khẩu"
+            android:text="@string/đổimậtkhẩu"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginStart="8dp"/>
     </RelativeLayout>
 </LinearLayout>

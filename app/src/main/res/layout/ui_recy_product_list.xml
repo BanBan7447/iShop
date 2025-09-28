@@ -21,9 +21,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="4dp"
         android:baselineAligned="false"
-        android:text="iPhone 15 Pro Max"
+        android:text="@string/iphone_15_pro_max"
         android:textColor="@color/Dark"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <RelativeLayout
@@ -34,18 +34,18 @@
             android:id="@+id/Data_Price_Product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="30.990.000"
+            android:text="@string/_30_990_000"
             android:textColor="@color/Link"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/Data_Price_Product"
-            android:text=" đ"
+            android:layout_toEndOf="@+id/Data_Price_Product"
+            android:text="@string/đ"
             android:textColor="@color/Link"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </RelativeLayout>
 

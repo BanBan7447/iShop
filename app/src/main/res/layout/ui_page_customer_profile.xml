@@ -27,12 +27,12 @@
             android:id="@+id/TT_Payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Khách hàng"
+            android:text="@string/Khách_hàng"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
-            android:paddingLeft="12dp"/>
+            android:layout_toEndOf="@+id/Icon_Back"
+            android:paddingStart="12dp"/>
     </RelativeLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -52,8 +52,8 @@
         android:id="@+id/Data_Name_Customer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="22dp"
+        android:text="@string/name_1"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:layout_gravity="center"/>
@@ -75,19 +75,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số điện thoại:"
+            android:text="@string/SDT"
             android:textColor="@color/Dark"
             android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_toRightOf="@+id/Icon_Phone_Call"
-            android:layout_marginLeft="8dp"/>
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/Icon_Phone_Call"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_SDT_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SDT"
-            android:textSize="18dp"
+            android:text="@string/sdt_1"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
 
@@ -110,19 +110,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
+            android:text="@string/email_1"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Email"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Email"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Email_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="18dp"
+            android:text="@string/email_2"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
 
@@ -146,23 +146,23 @@
             android:id="@+id/Title_Location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Địa chỉ: "
+            android:text="@string/a_ch"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Location"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Location"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Location_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Location Customer"
-            android:textSize="18dp"
+            android:text="@string/location_customer_1"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/Icon_Location"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/Icon_Location"
             android:layout_below="@+id/Title_Location"/>
     </RelativeLayout>
 
@@ -183,19 +183,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số đơn hàng đã đặt:"
+            android:text="@string/SốĐơnHàng"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Cart"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Cart"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Quantity_Cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Num"
-            android:textSize="18dp"
+            android:text="@string/num1"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
@@ -218,12 +218,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số đơn hàng đã đặt:"
+            android:text="@string/s_n_h_ng_"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_History"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_History"
+            android:layout_marginStart="8dp"/>
 
         <ImageView
             android:layout_width="wrap_content"

@@ -142,7 +142,7 @@
         android:text="Xác nhận"
         android:textSize="20dp"
         android:background="@drawable/fill_radius_16"
-        app:backgroundTint="@color/Link"
+        app:backgroundTint="@color/Dark"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

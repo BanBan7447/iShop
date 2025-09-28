@@ -25,23 +25,23 @@
             android:id="@+id/TT_Manage_Product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quản lý "
+            android:text="@string/qu_n_ly"
             android:textColor="@color/Dark"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
-            android:paddingLeft="12dp"
+            android:layout_toEndOf="@+id/Icon_Back"
+            android:paddingStart="12dp"
             android:layout_centerVertical="true" />
 
         <TextView
             android:id="@+id/Data_Name_ProductType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tên loại"
+            android:text="@string/t_n_lo_ai"
             android:textColor="@color/Dark"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/TT_Manage_Product"
+            android:layout_toEndOf="@+id/TT_Manage_Product"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 

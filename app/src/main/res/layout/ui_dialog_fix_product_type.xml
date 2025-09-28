@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Chỉnh sửa loại sản phẩm"
-        android:textSize="18dp"
+        android:text="@string/Chỉnh_sửa_loại_sản_phẩm"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:layout_margin="12dp"/>
@@ -23,10 +23,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
-        android:hint="Nhập mã loại:"
+        android:hint="@string/Nhập_loại_mã"
         android:textColorHint="@color/Dark"
         android:textStyle="bold"
-        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
         android:background="@drawable/stroke_raidus_16"/>
 
     <EditText
@@ -36,10 +36,10 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:hint="Nhập tên loại:"
+        android:hint="@string/Nhập_loại_tên"
         android:textColorHint="@color/Dark"
         android:textStyle="bold"
-        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
         android:background="@drawable/stroke_raidus_16"/>
 
     <Button
@@ -49,9 +49,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="12dp"
-        android:text="Xác nhận"
+        android:text="@string/Xác_nhận"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:background="@drawable/fill_radius_16"
         app:backgroundTint="@color/Link"/>
 

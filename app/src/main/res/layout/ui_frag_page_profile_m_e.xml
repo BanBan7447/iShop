@@ -21,9 +21,6 @@
             android:layout_margin="20dp"
          />
 
-
-
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/Data_Image_m_e"
         android:layout_width="150dp"
@@ -41,8 +38,8 @@
         android:id="@+id/Data_Name_m_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:textSize="22dp"
+        android:text="@string/name2"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:layout_gravity="center"/>
@@ -64,19 +61,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số điện thoại:"
+            android:text="@string/sốđiệnthoại2"
             android:textColor="@color/Dark"
             android:textStyle="bold"
-            android:textSize="18dp"
-            android:layout_toRightOf="@+id/Icon_Phone_Call"
-            android:layout_marginLeft="8dp"/>
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/Icon_Phone_Call"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_SDT_m_e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SDT"
-            android:textSize="18dp"
+            android:text="@string/sdt2"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
 
@@ -99,19 +96,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
+            android:text="@string/email3"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Email"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Email"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Email_m_e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="18dp"
+            android:text="@string/email4"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"/>
 
@@ -135,23 +132,23 @@
             android:id="@+id/Title_Location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Địa chỉ: "
+            android:text="@string/địachỉ"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/Icon_Location"
-            android:layout_marginLeft="8dp"/>
+            android:layout_toEndOf="@id/Icon_Location"
+            android:layout_marginStart="8dp"/>
 
         <TextView
             android:id="@+id/Data_Location_m_e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Location Customer"
-            android:textSize="18dp"
+            android:text="@string/location_customer2"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="8dp"
-            android:layout_toRightOf="@+id/Icon_Location"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/Icon_Location"
             android:layout_below="@+id/Title_Location"/>
     </RelativeLayout>
 

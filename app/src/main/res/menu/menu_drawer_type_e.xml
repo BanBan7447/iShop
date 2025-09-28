@@ -2,30 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/Fragment_Manage_Orders"
-        android:title="Quản lý đơn hàng"
+        android:title="@string/qu_n_l_n_h_ng"
         android:icon="@drawable/icon_cart"/>
 
     <item
         android:id="@+id/Fragment_Manage_Bill"
-        android:title="Quản lý hóa đơn"
+        android:title="@string/qu_n_l_h_a_n"
         android:icon="@drawable/icon_bill"/>
 
     <item
         android:id="@+id/Fragment_Manage_Customers"
-        android:title="Quản lý khách hàng"
+        android:title="@string/qu_n_l_kh_ch_h_ng"
         android:icon="@drawable/icon_group"/>
     <item
         android:id="@+id/proFile"
-        android:title="Trang cá nhân"
+        android:title="@string/trang_c_nh_n"
         android:icon="@drawable/icon_user"/>
 
     <item
         android:id="@+id/Dialog_Change_Password"
-        android:title="Đổi mật khẩu"
+        android:title="@string/i_m_t_kh_u"
         android:icon="@drawable/icon_change_pass"/>
 
     <item
         android:id="@+id/Exit"
-        android:title="Thoát"
+        android:title="@string/tho_t"
         android:icon="@drawable/icon_exit"/>
 </menu>

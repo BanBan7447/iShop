@@ -26,12 +26,12 @@
             android:id="@+id/TT_Payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lịch sử đặt hàng"
+            android:text="@string/l_ch_s_t_h_ng"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
-            android:paddingLeft="12dp"/>
+            android:layout_toEndOf="@+id/Icon_Back"
+            android:paddingStart="12dp"/>
     </RelativeLayout>
 
     <SearchView

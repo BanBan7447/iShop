@@ -12,7 +12,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@mipmap/iphone_15_pro_max"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="15dp"/>
 
     <RelativeLayout
@@ -23,8 +23,8 @@
             android:id="@+id/Data_Name_ProductCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="iPhone 15 Pro Max"
-            android:textSize="18dp"
+            android:text="@string/iphone_15_pro_max1"
+            android:textSize="18sp"
             android:textColor="@color/Dark"
             android:textStyle="bold"/>
 
@@ -32,8 +32,8 @@
             android:id="@+id/Data_Name_ProductTypeCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="iPhone"
-            android:textSize="16dp"
+            android:text="@string/i_phone"
+            android:textSize="16sp"
             android:textColor="@color/PaleWhite"
             android:textStyle="bold"
             android:layout_below="@id/Data_Name_ProductCart"/>
@@ -43,8 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="309.900.000"
-            android:textSize="20dp"
+            android:text="@string/_309_900_000"
+            android:textSize="20sp"
             android:textColor="@color/Link"
             android:textStyle="bold"
             android:layout_below="@+id/Data_Name_ProductTypeCart"/>
@@ -53,12 +53,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text=" đ"
-            android:textSize="20dp"
+            android:text="@string/đ_1"
+            android:textSize="20sp"
             android:textColor="@color/Link"
             android:textStyle="bold"
             android:layout_below="@+id/Data_Name_ProductTypeCart"
-            android:layout_toRightOf="@+id/Data_Price_ProductCart"/>
+            android:layout_toEndOf="@+id/Data_Price_ProductCart"/>
 
         <TextView
             android:id="@+id/Data_Quantity_ProductCart"
@@ -66,8 +66,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:text="10"
-            android:textSize="20dp"
+            android:text="@string/_10"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/Dark"
             android:layout_alignParentEnd="true"

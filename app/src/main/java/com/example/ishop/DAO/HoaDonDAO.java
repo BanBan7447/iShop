@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.ishop.Database.DBHelper;
 import com.example.ishop.Model.HoaDon;
-import com.example.ishop.Model.SanPham;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

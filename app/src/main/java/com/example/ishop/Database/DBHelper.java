@@ -65,7 +65,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "gioitinhQL text)" ;
 
         db.execSQL(tQUANLY);
-        db.execSQL("INSERT INTO QUANLY VALUES('IM9250','cme_quan_ly','Nghiêu Tấn Hoàng','0212519292','tanhoang925@ishop.vn','1234','Hồ Chí Minh','24','Nam')");
+        db.execSQL("INSERT INTO QUANLY VALUES('IM9250','cme_quan_ly','Nghiêu Tấn Hoàng','0212519292','quanliem925@ishop.vn','1234','Hồ Chí Minh','24','Nam')");
 
         //table LOẠI SẢN PHẨM
         String tLOAISANPHAM = "CREATE TABLE LOAISANPHAM(maLSP text primary key," +

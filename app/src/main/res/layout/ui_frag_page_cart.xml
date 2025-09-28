@@ -23,12 +23,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/Logo_App"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/Logo_App"
             android:fontFamily="@font/karla_bold"
-            android:text="iShop"
+            android:text="@string/ishop"
             android:textColor="@color/Dark"
-            android:textSize="18dp" />
+            android:textSize="18sp" />
 
         <ImageButton
             android:id="@+id/icon_history"
@@ -50,17 +50,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Giỏ hàng"
+            android:text="@string/giỏ_hàng1"
             android:textColor="@color/Dark"
-            android:textSize="22dp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:layout_toLeftOf="@+id/Quantity_Cart_Product"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/Quantity_Cart_Product"
             android:src="@drawable/icon_cart" />
 
         <TextView
@@ -69,9 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="0"
+            android:text="@string/_0"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
@@ -95,8 +95,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/fill_radius_16"
-        android:text="Đặt Hàng"
-        android:textSize="20dp"
+        android:text="@string/Đặt_hàng"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:backgroundTint="@color/Link" />
 </RelativeLayout>

@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="10dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="10dp"
     android:layout_marginBottom="20dp"
     android:padding="10dp"
     android:background="@drawable/stroke_raidus_16"
@@ -30,8 +30,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã số: "
-            android:textSize="16dp"
+            android:text="@string/m_sfs"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/Dark"/>
 
@@ -39,8 +39,8 @@
             android:id="@+id/Data_Code_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="KH0000"
-            android:textSize="16dp"
+            android:text="@string/kh0000a"
+            android:textSize="16sp"
             android:textColor="@color/Dark"/>
     </LinearLayout>
 
@@ -53,8 +53,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Họ tên: "
-            android:textSize="16dp"
+            android:text="@string/ah_t_n"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/Dark"/>
 
@@ -62,8 +62,8 @@
             android:id="@+id/Data_Name_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trần Khánh Vy"
-            android:textSize="16dp"
+            android:text="@string/tr_n_kh_nh_vya"
+            android:textSize="16sp"
             android:textColor="@color/Dark"
             android:ellipsize="end"
             android:maxLines="1"/>
@@ -78,8 +78,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SDT: "
-            android:textSize="16dp"
+            android:text="@string/sdta"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/Dark"/>
 
@@ -87,8 +87,8 @@
             android:id="@+id/Data_SDT_Customer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0912214982"
-            android:textSize="16dp"
+            android:text="@string/_0912214982fs"
+            android:textSize="16sp"
             android:textColor="@color/Dark"
             android:ellipsize="end"
             android:maxLines="1"/>

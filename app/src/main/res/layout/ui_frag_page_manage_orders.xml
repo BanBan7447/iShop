@@ -33,15 +33,15 @@
             android:id="@+id/Btn_Select_NotDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/fill_radius_16"
             android:paddingLeft="16dp"
             android:paddingTop="10dp"
             android:paddingRight="16dp"
             android:paddingBottom="10dp"
-            android:text="Chưa xử lý"
+            android:text="@string/chưaxửlý"
             android:textColor="@color/Dark"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:backgroundTint="@color/PaleWhite" />
 
@@ -53,11 +53,11 @@
             android:paddingLeft="16dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:layout_marginRight="20dp"
-            android:text="Đang xử lý"
+            android:layout_marginEnd="20dp"
+            android:text="@string/đangsửlý"
             android:textStyle="bold"
             android:textColor="@color/Light"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:background="@drawable/fill_radius_16"
             app:backgroundTint="@color/Link"/>
 
@@ -69,10 +69,10 @@
             android:paddingLeft="16dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Đã xử lý"
+            android:text="@string/đã_sử_lý"
             android:textStyle="bold"
             android:textColor="@color/Light"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:background="@drawable/fill_radius_16"
             app:backgroundTint="@color/Done"/>
     </LinearLayout>

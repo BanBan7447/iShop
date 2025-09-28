@@ -26,12 +26,12 @@
             android:id="@+id/Title_Page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thống kê khách hàng"
+            android:text="@string/th_ng_k_kh_ch_h_ng"
             android:textColor="@color/Dark"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
-            android:paddingLeft="12dp"
+            android:layout_toEndOf="@+id/Icon_Back"
+            android:paddingStart="12dp"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
@@ -39,11 +39,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tổng khách hàng đã đăng ký app:"
+        android:text="@string/t_ng_kh_ch_h_ng_ng_k_app"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"/>
 
     <LinearLayout
@@ -56,17 +56,17 @@
             android:id="@+id/Data_Total_Customer_Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.000.000.000"
-            android:textSize="24dp"
+            android:text="@string/_100_000_000_0003"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginStart="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" người dùng"
-            android:textSize="24dp"
+            android:text="@string/ng_uoi_d_ng"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -75,11 +75,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tổng khách hàng đã mua hàng:"
+        android:text="@string/t_ng_kh_ch_h_ng_mua_h_ng"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"/>
 
     <LinearLayout
@@ -92,17 +92,17 @@
             android:id="@+id/Data_Total_Customer_Buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.000.000.000"
-            android:textSize="24dp"
+            android:text="@string/_100_000_000_000"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginStart="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" người dùng"
-            android:textSize="24dp"
+            android:text="@string/ng_i_d_ng"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -116,12 +116,12 @@
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         android:paddingBottom="5dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Chọn thời gian thống kê"
+        android:text="@string/ch_n_th_i_gian_th_ng_k"
         android:textColor="@color/Dark"
         android:textStyle="bold"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:background="@drawable/fill_radius_16"
         app:backgroundTint="#E3E3E3"/>
 
@@ -129,21 +129,21 @@
         android:id="@+id/myDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"
-        android:text="14/07/2024"
+        android:text="@string/_14_07_2024z"
         android:textStyle="bold"
         android:textColor="@color/Dark"
-        android:textSize="24dp"/>
+        android:textSize="24sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Số khách hàng đã đăng ký app:"
+        android:text="@string/s_kh_ch_h_ng_ng_k_app"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"/>
 
     <LinearLayout
@@ -156,17 +156,17 @@
             android:id="@+id/Data_Customer_Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.000.000.000"
-            android:textSize="24dp"
+            android:text="@string/_100_000_000_0001"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginStart="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" người dùng"
-            android:textSize="24dp"
+            android:text="@string/ng_i_du_ng"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -175,11 +175,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Số khách hàng đã mua hàng:"
+        android:text="@string/s_kh_ch_h_ng_mua_h_ng"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="10dp"/>
 
     <LinearLayout
@@ -192,17 +192,17 @@
             android:id="@+id/Data_Customer_Buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100.000.000.000"
-            android:textSize="24dp"
+            android:text="@string/_100_000_000_0002"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginStart="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" người dùng"
-            android:textSize="24dp"
+            android:text="@string/ng_i_d_ung"
+            android:textSize="24sp"
             android:textColor="@color/Link"
             android:textStyle="bold"/>
     </LinearLayout>

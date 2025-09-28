@@ -17,16 +17,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã đơn hàng:"
+            android:text="@string/m_n_h_ngs"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/Data_Code_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DH0000"
-            android:textSize="18dp"
+            android:text="@string/adh0000"
+            android:textSize="18sp"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mã khách hàng:"
+            android:text="@string/m_kh_ch_h_nga"
             android:textStyle="bold"
             android:textSize="18dp"/>
 
@@ -48,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:text="KH0000"
-            android:textSize="18dp" />
+            android:text="@string/skh0000"
+            android:textSize="18sp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -61,16 +61,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thời gian đặt hàng:"
+            android:text="@string/ath_i_gian_t_h_ng"
             android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/Data_Date_Orders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="14/07/2024"
-            android:textSize="18dp"
+            android:text="@string/a_14_07_2024"
+            android:textSize="18sp"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
 
@@ -80,8 +80,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Chưa xử lý"
-        android:textSize="18dp"
+        android:text="@string/ach_a_x_l"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/fill_radius_16"

@@ -13,14 +13,14 @@ s
         android:layout_width="110dp"
         android:layout_height="110dp"
         android:src="@mipmap/iphone_15_pro_max"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginEnd="10dp"/>
 
     <LinearLayout
         android:id="@+id/Info_Product"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_toRightOf="@+id/Data_Image_Product">
+        android:layout_toEndOf="@+id/Data_Image_Product">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -31,16 +31,16 @@ s
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mã số: "
-                android:textSize="18dp"
+                android:text="@string/m_s"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/Data_Code_Product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="iPE0000"
-                android:textSize="18dp"/>
+                android:text="@string/ipe0000"
+                android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -52,16 +52,16 @@ s
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tên: "
-                android:textSize="18dp"
+                android:text="@string/t_n"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/Data_Name_Product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="iPhone 15 Pro Max"
-                android:textSize="18dp"/>
+                android:text="@string/iphone_15_pro_max2"
+                android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -73,22 +73,22 @@ s
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Đơn giá: "
-                android:textSize="18dp"
+                android:text="@string/đơngiá"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/Data_Price_Product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="30.990.000"
-                android:textSize="18dp"/>
+                android:text="@string/_31_990_000"
+                android:textSize="18sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" đ"
-                android:textSize="18dp"/>
+                android:text="@string/Đ"
+                android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -99,16 +99,16 @@ s
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Loại: "
-                android:textSize="18dp"
+                android:text="@string/Loại"
+                android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/Data_Name_ProductType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="iPhone"
-                android:textSize="18dp"/>
+                android:text="@string/iphone6"
+                android:textSize="18sp"/>
         </LinearLayout>
 
     </LinearLayout>

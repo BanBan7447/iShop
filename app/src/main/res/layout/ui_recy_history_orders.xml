@@ -14,8 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Mã hóa đơn: "
-        android:textSize="18dp"
+        android:text="@string/m_h_a_nf"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
         android:textStyle="bold"/>
 
@@ -24,10 +24,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="HD0000"
-        android:textSize="18dp"
+        android:text="@string/hd0000f"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_toRightOf="@+id/TT_Code_Bill"/>
+        android:layout_toEndOf="@+id/TT_Code_Bill"/>
 
 
     <TextView
@@ -35,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Mã đơn hàng: "
-        android:textSize="18dp"
+        android:text="@string/m_n_h_ngf"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
         android:textStyle="bold"
         android:layout_below="@id/TT_Code_Bill"/>
@@ -46,10 +46,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="HD0000"
-        android:textSize="18dp"
+        android:text="@string/hd0000v"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_toRightOf="@+id/TT_Code_Orders"
+        android:layout_toEndOf="@+id/TT_Code_Orders"
         android:layout_below="@+id/Data_Code_Bill"/>
 
 
@@ -58,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Thời gian đặt hàng: "
-        android:textSize="18dp"
+        android:text="@string/th_i_gian_t_h_ng15"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
         android:textStyle="bold"
         android:layout_below="@+id/TT_Code_Orders"/>
@@ -69,10 +69,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:layout_toRightOf="@+id/TT_Date_Orders"
-        android:text="14/07/2024"
+        android:layout_toEndOf="@+id/TT_Date_Orders"
+        android:text="@string/_14_07_202444"
         android:textColor="@color/Dark"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:layout_below="@+id/Data_Code_Orders"/>
 
 
@@ -81,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Tổng: "
-        android:textSize="18dp"
+        android:text="@string/t_ng4"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
         android:textStyle="bold"
         android:layout_below="@+id/Data_Date_Orders"/>
@@ -92,20 +92,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="1.140.090.000"
-        android:textSize="18dp"
+        android:text="@string/_1_140_090_00044"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_toRightOf="@+id/TT_Total_Price"
+        android:layout_toEndOf="@+id/TT_Total_Price"
         android:layout_below="@+id/Data_Date_Orders"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text=" đ"
-        android:textSize="18dp"
+        android:text="@string/đ4"
+        android:textSize="18sp"
         android:textColor="@color/Dark"
-        android:layout_toRightOf="@+id/Data_Total_Price"
+        android:layout_toEndOf="@+id/Data_Total_Price"
         android:layout_below="@+id/Data_Date_Orders"/>
 
     <ImageButton

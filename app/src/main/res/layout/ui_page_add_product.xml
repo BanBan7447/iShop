@@ -28,13 +28,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thêm sản phẩm"
+            android:text="@string/Thêm_SP"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
+            android:layout_toEndOf="@+id/Icon_Back"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"/>
+            android:layout_marginStart="12dp"/>
     </RelativeLayout>
 
     <EditText
@@ -45,8 +45,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/Title_Page"
-        android:text="Nhập mã:"
-        android:paddingLeft="14dp"
+        android:text="@string/nh_p_m"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
@@ -59,8 +59,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/EdtAdd_Code_Product"
-        android:text="Nhập tên:"
-        android:paddingLeft="14dp"
+        android:text="@string/nh_p_t_n"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
@@ -73,8 +73,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/EdtAdd_Name_Product"
-        android:text="Nhập giá:"
-        android:paddingLeft="14dp"
+        android:text="@string/nh_p_gi"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
@@ -87,18 +87,18 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/EdtAdd_Price_Product"
-        android:text="Nhập mô tả:"
-        android:paddingLeft="14dp"
+        android:text="@string/nh_p_m_t2"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
     <TextView
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hình ảnh sản phẩm"
+        android:text="@string/h_nh_nh_s_n_ph_m"
         android:textColor="@color/Dark"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textStyle="bold"/>
 
     <ImageView
@@ -117,9 +117,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="40dp"
         android:layout_marginTop="40dp"
-        android:text="Xác nhận"
+        android:text="@string/xácnhận"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:background="@drawable/fill_radius_16"
         app:backgroundTint="@color/Link"
         android:layout_alignParentBottom="true"/>

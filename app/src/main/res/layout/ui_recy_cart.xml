@@ -2,109 +2,113 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp"
-    android:layout_marginTop="15dp"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_margin="10dp"
     android:background="@drawable/stroke_bottom">
 
+    <!-- Ảnh sản phẩm -->
     <ImageView
         android:id="@+id/Data_Image_Product"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="10dp"
         android:src="@mipmap/iphone_15_pro_max"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="15dp"/>
+        android:scaleType="centerCrop" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <!-- Thông tin sản phẩm -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/Data_Name_Product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="iPhone 15 Pro Max"
-            android:textSize="18dp"
+            android:text="@string/iphone_15_pro_maxv"
             android:textColor="@color/Dark"
-            android:textStyle="bold"/>
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Data_Name_ProductType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="iPhone"
-            android:textSize="16dp"
+            android:text="@string/iphonex"
             android:textColor="@color/PaleWhite"
-            android:textStyle="bold"
-            android:layout_below="@id/Data_Name_Product"/>
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Data_Price_Product"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="30.990.000"
-            android:textSize="20dp"
-            android:textColor="@color/Link"
-            android:textStyle="bold"
-            android:layout_below="@+id/Data_Name_ProductType"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
 
-        <TextView
+            <TextView
+                android:id="@+id/Data_Price_Product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_30_990_000x"
+                android:textColor="@color/Link"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/s"
+                android:textColor="@color/Link"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Số lượng và nút tăng giảm -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text=" đ"
-            android:textSize="20dp"
-            android:textColor="@color/Link"
-            android:textStyle="bold"
-            android:layout_below="@+id/Data_Name_ProductType"
-            android:layout_toRightOf="@+id/Data_Price_Product"/>
-
-        <ImageButton
-            android:id="@+id/Btn_Del_ProductCart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_delete"
-            android:background="@color/Light"
-            android:layout_alignParentEnd="true"/>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Data_Name_ProductType"
-            android:layout_marginTop="-2dp">
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical">
 
             <ImageButton
                 android:id="@+id/Btn_Down_ProductCart"
-                android:layout_width="24dp"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/Quantity_ProductCart"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:background="@color/Light"
-                android:src="@drawable/icon_down_product" />
+                android:src="@drawable/icon_down_product"
+                android:contentDescription="@string/gi_m_s_l_ng" />
 
             <TextView
                 android:id="@+id/Quantity_ProductCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:layout_marginRight="14dp"
-                android:layout_toLeftOf="@+id/Btn_Up_ProductCart"
-                android:text="0"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/x"
                 android:textColor="@color/Dark"
-                android:textSize="22dp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageButton
                 android:id="@+id/Btn_Up_ProductCart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:background="@color/Light"
-                android:src="@drawable/icon_up_product" />
+                android:src="@drawable/icon_up_product"
+                android:contentDescription="@string/t_ng_s_l_ng" />
+        </LinearLayout>
+    </LinearLayout>
 
-        </RelativeLayout>
-
-    </RelativeLayout>
-
+    <!-- Nút xóa -->
+    <ImageButton
+        android:id="@+id/Btn_Del_ProductCart"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@color/Light"
+        android:src="@drawable/btn_white_fix"
+        android:contentDescription="@string/x_a_s_n_ph_m" />
 </LinearLayout>

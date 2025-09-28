@@ -33,12 +33,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Thống kê doanh thu"
-            android:textSize="24dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/th_ng_k_doanh_thu"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/Icon_Revenue_Statistical"/>
+            android:layout_toEndOf="@+id/Icon_Revenue_Statistical"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -71,9 +71,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Thống kê khách hàng"
-            android:textSize="24dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/ThốngKê_kháchHàng"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/Icon_Customer_Statistical"/>
@@ -109,12 +109,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Thống kê sản phẩm"
-            android:textSize="24dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/ThốngKê_SảnPhẩm"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/Icon_Product_Statistical"/>
+            android:layout_toEndOf="@+id/Icon_Product_Statistical"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -147,12 +147,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Thống kê mua hàng"
-            android:textSize="24dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/ThốngKê_MuaHàng"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/Icon_Orders_Statistical"/>
+            android:layout_toEndOf="@+id/Icon_Orders_Statistical"/>
 
         <ImageView
             android:layout_width="wrap_content"

@@ -19,6 +19,7 @@
             android:id="@+id/Icon_Back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/todoz"
             android:src="@drawable/icon_back"
             android:rotation="180"
             android:layout_marginTop="20dp"
@@ -27,13 +28,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chỉnh sửa sản phẩm"
+            android:text="@string/ch_nh_s_a_s_n_ph_m"
             android:textColor="@color/Dark"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_toRightOf="@+id/Icon_Back"
+            android:layout_toEndOf="@+id/Icon_Back"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"/>
+            android:layout_marginStart="12dp"/>
     </RelativeLayout>
 
     <EditText
@@ -44,8 +45,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/Title_Page"
-        android:text="Nhập mã:"
-        android:paddingLeft="14dp"
+        android:text="@string/NhậpMã"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
@@ -58,8 +59,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/EdtFix_Code_Product"
-        android:text="Nhập tên:"
-        android:paddingLeft="14dp"
+        android:text="@string/nhap_tene"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
@@ -72,8 +73,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:layout_below="@+id/EdtFix_Name_Product"
-        android:text="Nhập giá:"
-        android:paddingLeft="14dp"
+        android:text="@string/nhập_giá"
+        android:paddingStart="14dp"
         android:textStyle="bold"
         android:textColor="@color/Dark"
         android:background="@drawable/stroke_raidus_16"/>
@@ -88,8 +89,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/stroke_raidus_16"
-        android:paddingLeft="14dp"
-        android:text="Nhập mô tả:"
+        android:paddingStart="14dp"
+        android:text="@string/nh_p_m_t"
         android:textColor="@color/Dark"
         android:textStyle="bold" />
 
@@ -100,11 +101,11 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="40dp"
-        android:text="Xác nhận"
+        android:text="@string/x_c_nh_n"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:background="@drawable/fill_radius_16"
-        app:backgroundTint="@color/Link"
+        app:backgroundTint="@color/Dark"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

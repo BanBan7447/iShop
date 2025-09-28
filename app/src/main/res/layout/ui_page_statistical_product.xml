@@ -9,19 +9,16 @@
     android:orientation="vertical"
     android:background="@color/Light">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/main"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Type_Manager.Page_Statistical_Product"
-        android:orientation="vertical"
         android:background="@color/Light">
 
-        <LinearLayout
+
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -41,12 +38,12 @@
                     android:id="@+id/Title_Page"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thống kê sản phẩm"
+                    android:text="@string/th_ng_k_s_n_ph_mf"
                     android:textColor="@color/Dark"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_toRightOf="@+id/Icon_Back"
-                    android:paddingLeft="12dp"
+                    android:layout_toEndOf="@+id/Icon_Back"
+                    android:paddingStart="12dp"
                     android:layout_centerVertical="true"/>
             </RelativeLayout>
 
@@ -54,11 +51,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tổng số máy iPhone được đặt hàng:"
+                android:text="@string/t_ng_s_m_y_iphone_c_t_h_ngv"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -71,17 +68,17 @@
                     android:id="@+id/Data_Total_Sold_iPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000v"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chi_cv"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -90,11 +87,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tổng số máy iPad được đặt hàng:"
+                android:text="@string/t_ng_s_m_y_ipad_c_t_h_ngx"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -107,17 +104,17 @@
                     android:id="@+id/Data_Total_Sold_iPad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000x"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chi_cư"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -126,11 +123,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tổng số máy Mac được đặt hàng:"
+                android:text="@string/t_ng_s_m_y_mac_c_t_h_nga"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -143,17 +140,17 @@
                     android:id="@+id/Data_Total_Sold_Mac"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000f"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chi_ca"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -162,11 +159,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tổng số máy Apple Watch được đặt hàng:"
+                android:text="@string/t_ng_s_m_y_apple_watch_c_t_h_ngz"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -179,17 +176,17 @@
                     android:id="@+id/Data_Total_Sold_Watch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000z"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chi_cz"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -203,12 +200,12 @@
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp"
                 android:paddingBottom="5dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Chọn thời gian thống kê"
+                android:text="@string/ch_n_th_i_gian_th_ng_kx"
                 android:textColor="@color/Dark"
                 android:textStyle="bold"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:background="@drawable/fill_radius_16"
                 app:backgroundTint="#E3E3E3"/>
 
@@ -216,22 +213,22 @@
                 android:id="@+id/myDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"
-                android:text="14/07/2024"
+                android:text="@string/_14_07_2024x"
                 android:textStyle="bold"
                 android:textColor="@color/Dark"
-                android:textSize="24dp"/>
+                android:textSize="24sp"/>
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số máy iPhone được đặt hàng:"
+                android:text="@string/s_m_y_iphone_c_t_h_ng"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -244,17 +241,17 @@
                     android:id="@+id/Data_Sold_iPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000s"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chie_c"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -263,11 +260,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số máy iPad được đặt hàng:"
+                android:text="@string/s_m_y_ipad_c_t_h_ng"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -280,17 +277,17 @@
                     android:id="@+id/Data_Sold_iPad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000g"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/gchi_c"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -299,11 +296,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số máy Mac được đặt hàng:"
+                android:text="@string/s_m_y_mac_c_t_h_ng"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -316,17 +313,17 @@
                     android:id="@+id/Data_Sold_Mac"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000h"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chi_cj"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -335,11 +332,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Số máy Apple Watch được đặt hàng:"
+                android:text="@string/s_m_y_apple_watch_c_t_h_ng"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:textColor="@color/Dark"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="10dp"/>
 
             <LinearLayout
@@ -352,17 +349,17 @@
                     android:id="@+id/Data_Sold_Watch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="100.000.000.000"
-                    android:textSize="24dp"
+                    android:text="@string/_100_000_000_000l"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"/>
+                    android:layout_marginStart="20dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" chiếc"
-                    android:textSize="24dp"
+                    android:text="@string/chi_c"
+                    android:textSize="24sp"
                     android:textColor="@color/Link"
                     android:textStyle="bold"/>
             </LinearLayout>
